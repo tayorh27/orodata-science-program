@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{PTPi:function(n,o,t){"use strict";t.r(o),t.d(o,"AuthLayoutModule",(function(){return f}));var u=t("tyNb"),i=t("ofXK"),r=t("3Pt+"),c=[],e=t("fXoL"),f=function(){function n(){}return n.\u0275mod=e.Ib({type:n}),n.\u0275inj=e.Hb({factory:function(o){return new(o||n)},imports:[[i.b,u.d.forChild(c),r.a]]}),n}()}}]);
