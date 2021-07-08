@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 // import { EChartsOption } from "echarts";
 // import LinearGradient from 'zrender/lib/graphic/LinearGradient';
 import Chart from 'chart.js';
 import { economicData, economicData2 } from "../../economy-data";
 import { DummyData } from "../../population-data";
 import { ChartComponent } from '@syncfusion/ej2-angular-charts';
+// import * as xlsx from 'xlsx';
 // core components
 
 @Component({
@@ -26,6 +27,10 @@ export class MyChartComponent implements OnInit {
 
     clicked = false
     clicked1 = true
+
+    dataSelection = ""
+
+    @ViewChild('rechargetable', { static: false }) rtable: ElementRef;
 
     subDataTracker = [
         { "name": "health", "options": ["-", "Total Confirmed Covid-19 Cases", "Total Confirmed Deaths", "Vaccination Logistics Expenditure", "FGN Covid-19 Support to State"] },
@@ -90,6 +95,7 @@ export class MyChartComponent implements OnInit {
             return
         }
         this.chartType = evt.target.value
+        this.chart.refresh()
     }
 
     exportChart() {
@@ -104,6 +110,7 @@ export class MyChartComponent implements OnInit {
     }
 
     onSubTrackerChanged(evt: any) {
+        this.dataSelection = evt.target.value
         this.chartData = []
         this.chartTitle = "No data available yet"
         this.source = ""
@@ -127,6 +134,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#de5460"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "Total Confirmed Deaths") {
@@ -144,6 +152,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#d93b4a"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "Share of Population Living in Extreme Poverty") {
@@ -162,6 +171,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#de5460"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "Total Population") {
@@ -179,6 +189,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#00aeaa"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "Vaccination Logistics Expenditure") {
@@ -197,13 +208,14 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#00aeaa"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "FGN Covid-19 Support to State") {
             this.chartData = []
             this.stacked = false
             this.lineChart = false
-            this.source = "Federal Ministry of Finance, Presidential Task Force, UN, DPG-H, NCDC"
+            this.source = "NCDC"
             // this.data = new DummyData().mapData.map((val) => val.covid_support)
             // this.ordersChart.destroy()
             // this.viewChartForGeneral("FGN Covid-19 Support to State", "#00aeaa")
@@ -215,6 +227,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#00aeaa"]
+            // this.chart.refresh()
             return
         }
 
@@ -239,6 +252,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0", "#36a2eb"]
+            // this.chart.refresh()
             return
         }
 
@@ -262,6 +276,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0", "#36a2eb"]
+            // this.chart.refresh()
             return
         }
 
@@ -285,6 +300,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0", "#36a2eb"]
+            // this.chart.refresh()
             return
         }
 
@@ -308,6 +324,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0", "#d93b4a"]
+            // this.chart.refresh()
             return
         }
 
@@ -331,6 +348,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0", "#d93b4a"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "Health Budget") {
@@ -349,6 +367,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#36a2eb"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "Actual Capital Expenditure") {
@@ -367,6 +386,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "Total Debt") {
@@ -385,6 +405,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#d93b4a"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "2019 Domestic Debt (NGN)") {
@@ -405,6 +426,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#d93b4a"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "2019 External Debt (USD)") {
@@ -425,6 +447,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#d93b4a"]
+            // this.chart.refresh()
             return
         }
         // if (evt.target.value === "Debt Stock 2019 - 2") {
@@ -453,6 +476,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#d93b4a"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "Debt Size") {
@@ -471,6 +495,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#d93b4a"]
+            // this.chart.refresh()
             return
         }
         if (evt.target.value === "Total Debt Trend (2014 - 2019)") {
@@ -505,6 +530,7 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#172b4d", "#5e72e4", "#ff4500", "#11cdef", "#2dce89", "#a52a2a"]
+            // this.chart.refresh()
             return
         }
         this.data = []
@@ -512,11 +538,15 @@ export class MyChartComponent implements OnInit {
         this.viewChartForGeneral("No data available yet", "#")
     }
 
-    chartTitle = "";
+    chartTitle = "ertyuyiuoiyutiytyr";
     public primaryXAxis: Object;
     public chartData: Object[] = [];
     public tooltip: Object = {};
     public zoom:Object = {};
+    public legend:Object = {
+        visible: true,
+        toggleVisibility: false
+    };
     public palette: string[] = []
     public stacked = false
     public lineChart = false
@@ -1030,6 +1060,14 @@ export class MyChartComponent implements OnInit {
             data: myData
         });
     }
+
+    // exportToExcel() {
+    //     const ws: xlsx.WorkSheet =
+    //       xlsx.utils.table_to_sheet(this.rtable.nativeElement);
+    //     const wb: xlsx.WorkBook = xlsx.utils.book_new();
+    //     xlsx.utils.book_append_sheet(wb, ws, 'Sheet1');
+    //     xlsx.writeFile(wb, `${this.dataSelection.replace(/\ /g, "-")}.xlsx`);
+    //   }
 
 }
 

@@ -17,6 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MapsModule } from "@syncfusion/ej2-angular-maps";
 import { ChartModule, ChartAllModule, AccumulationChartAllModule, RangeNavigatorAllModule } from "@syncfusion/ej2-angular-charts";
 import { MyChartComponent } from 'src/app/pages/charts/charts.component';
+import { AboutUsComponent } from 'src/app/pages/about-us/about-us.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { MyChartComponent } from 'src/app/pages/charts/charts.component';
     TablesComponent,
     IconsComponent,
     MapsComponent,
-    MyChartComponent
+    MyChartComponent,
+    AboutUsComponent
   ]
 })
 

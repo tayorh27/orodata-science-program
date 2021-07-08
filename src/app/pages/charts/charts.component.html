@@ -124,20 +124,20 @@
           </div>
         </div>
         <div class="card-body">
-          <ejs-chart #chart *ngIf="!stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis' [tooltip]='tooltip' [zoomSettings]='zoom' [palettes]='palette'>
+          <ejs-chart #chart *ngIf="!stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis' [legendSettings]="legend" [title]='chartTitle' [tooltip]='tooltip' [zoomSettings]='zoom' [palettes]='palette'>
             <e-series-collection>
                 <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName="data" name="{{chartTitle}}"></e-series>
             </e-series-collection>
         </ejs-chart>
 
-        <ejs-chart #chart *ngIf="stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'[primaryYAxis]='primaryYAxis' [zoomSettings]='zoom' [title]='title' [tooltip]='tooltip' [palettes]='palette'>
+        <ejs-chart #chart *ngIf="stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'[primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom' [title]='title' [tooltip]='tooltip' [palettes]='palette'>
           <e-series-collection>
               <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data' name='{{stackedTitle1}}'></e-series>
               <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data1' name='{{stackedTitle2}}'></e-series>
           </e-series-collection>
       </ejs-chart>
 
-      <ejs-chart #chart *ngIf="lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'[primaryYAxis]='primaryYAxis' [title]='title' [zoomSettings]='zoom' [tooltip]='tooltip' [palettes]='palette'>
+      <ejs-chart #chart *ngIf="lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'[primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom' [tooltip]='tooltip' [palettes]='palette'>
         <e-series-collection>
             <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data' name='{{stackedTitle1}}'></e-series>
             <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data1' name='{{stackedTitle2}}'></e-series>
