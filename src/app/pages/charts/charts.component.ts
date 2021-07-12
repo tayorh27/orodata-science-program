@@ -5,6 +5,10 @@ import Chart from 'chart.js';
 import { economicData, economicData2 } from "../../economy-data";
 import { DummyData } from "../../population-data";
 import { ChartComponent } from '@syncfusion/ej2-angular-charts';
+import { TreeMap, TreeMapTooltip, TreeMapLegend } from '@syncfusion/ej2-angular-treemap';
+import { IItemMoveEventArgs, ILoadEventArgs, TreeMapTheme, IItemClickEventArgs } from '@syncfusion/ej2-angular-treemap';
+TreeMap.Inject(TreeMapTooltip, TreeMapLegend);
+
 // import * as xlsx from 'xlsx';
 // core components
 
@@ -15,6 +19,44 @@ import { ChartComponent } from '@syncfusion/ej2-angular-charts';
 })
 
 export class MyChartComponent implements OnInit {
+
+    //////////////////////////////////// TREEMAP STARTS ///////////////////////
+
+    // custom code start
+    public load = (args: ILoadEventArgs) => {
+        let theme: string = location.hash.split('/')[1];
+        theme = theme ? theme : 'Material';
+        args.treemap.theme = <TreeMapTheme>(theme.charAt(0).toUpperCase() + theme.slice(1));
+    }
+    // custom code end
+    titleSettings: object = {
+        text: '2019 External Debt (USD)',
+        textStyle: {
+            size: '15px'
+        }
+    };
+    public tooltipSettings: object = {
+        visible: true,
+        format: 'State: ${state}<br>2019 External Debt (USD): ${data}'
+    };
+    public legendSettings: object = {
+        visible: true,
+        position: 'Top',
+        shape: 'Rectangle'
+    };
+    dataSource: object[] = [];
+    weightValuePath: string = 'data';
+    treemapPalette: string[] = ['#C33764', '#AB3566', '#993367', '#853169', '#742F6A', '#632D6C', '#532C6D', '#412A6F', '#312870', '#1D2671'];
+    leafItemSettings: object = {
+        labelPath: '2019 External Debt (USD)',
+        border: { color: 'white', width: 0.5 }
+    };
+    border: object = {
+        color: 'white',
+        width: 0.5
+    };
+
+    //////////////////////////////////// TREEMAP ENDS /////////////////////////
 
     showHTML = false
     options: any;
@@ -91,7 +133,7 @@ export class MyChartComponent implements OnInit {
     @ViewChild('chart') public chart: ChartComponent;
 
     onChartTypeChange(evt: any) {
-        if(evt.target.value === "none") {
+        if (evt.target.value === "none") {
             return
         }
         this.chartType = evt.target.value
@@ -441,7 +483,7 @@ export class MyChartComponent implements OnInit {
             // this.viewChartForEconomyStacked("Domestic Debt (NGN)", "External Debt (USD)", data1, data2, false, true, ["#","#d93b4a"])
             this.chartTitle = "2019 External Debt (USD)"
             economicData.forEach((val) => {
-                this.chartData.push({
+                this.dataSource.push({
                     "state": val.x,
                     "data": val.Debt_Stock_2019_External_Debt
                 })
@@ -538,12 +580,12 @@ export class MyChartComponent implements OnInit {
         this.viewChartForGeneral("No data available yet", "#")
     }
 
-    chartTitle = "ertyuyiuoiyutiytyr";
+    chartTitle = "";
     public primaryXAxis: Object;
     public chartData: Object[] = [];
     public tooltip: Object = {};
-    public zoom:Object = {};
-    public legend:Object = {
+    public zoom: Object = {};
+    public legend: Object = {
         visible: true,
         toggleVisibility: false
     };

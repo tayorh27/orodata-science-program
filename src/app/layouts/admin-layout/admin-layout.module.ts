@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { ToastrModule } from 'ngx-toastr';
 
 import { MapsModule } from "@syncfusion/ej2-angular-maps";
+import { TreeMapAllModule, TreeMapModule, } from "@syncfusion/ej2-angular-treemap";
 import { ChartModule, ChartAllModule, AccumulationChartAllModule, RangeNavigatorAllModule } from "@syncfusion/ej2-angular-charts";
 import { MyChartComponent } from 'src/app/pages/charts/charts.component';
 import { AboutUsComponent } from 'src/app/pages/about-us/about-us.component';
@@ -28,6 +29,8 @@ import { AboutUsComponent } from 'src/app/pages/about-us/about-us.component';
     NgbModule,
     ClipboardModule,
     MapsModule,
+    TreeMapAllModule,
+    TreeMapModule,
     ChartModule,ChartAllModule, AccumulationChartAllModule, RangeNavigatorAllModule,
   ],
   declarations: [

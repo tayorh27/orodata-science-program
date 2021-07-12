@@ -124,29 +124,54 @@
           </div>
         </div>
         <div class="card-body">
-          <ejs-chart #chart *ngIf="!stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis' [legendSettings]="legend" [title]='chartTitle' [tooltip]='tooltip' [zoomSettings]='zoom' [palettes]='palette'>
+          <ejs-treemap id='container' #treemap style="display:block;" [titleSettings]='titleSettings'
+            [dataSource]='dataSource' [weightValuePath]='weightValuePath' [tooltipSettings]='tooltipSettings'
+            [treemapPalette]='palette' [legendSettings]='legendSettings' [leafItemSettings]='leafItemSettings' format='n'
+            useGroupingSeparator="true" (load)='load($event)'>
+            <e-levels>
+              <e-level groupPath='state' [border]='border'>
+              </e-level>
+            </e-levels>
+          </ejs-treemap>
+
+          <ejs-chart #chart *ngIf="!stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
+            [legendSettings]="legend" [title]='chartTitle' [tooltip]='tooltip' [zoomSettings]='zoom'
+            [palettes]='palette'>
             <e-series-collection>
-                <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName="data" name="{{chartTitle}}"></e-series>
+              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName="data" name="{{chartTitle}}">
+              </e-series>
             </e-series-collection>
-        </ejs-chart>
+          </ejs-chart>
 
-        <ejs-chart #chart *ngIf="stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'[primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom' [title]='title' [tooltip]='tooltip' [palettes]='palette'>
-          <e-series-collection>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data' name='{{stackedTitle1}}'></e-series>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data1' name='{{stackedTitle2}}'></e-series>
-          </e-series-collection>
-      </ejs-chart>
+          <ejs-chart #chart *ngIf="stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
+            [primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom'
+            [title]='title' [tooltip]='tooltip' [palettes]='palette'>
+            <e-series-collection>
+              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data'
+                name='{{stackedTitle1}}'></e-series>
+              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data1'
+                name='{{stackedTitle2}}'></e-series>
+            </e-series-collection>
+          </ejs-chart>
 
-      <ejs-chart #chart *ngIf="lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'[primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom' [tooltip]='tooltip' [palettes]='palette'>
-        <e-series-collection>
-            <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data' name='{{stackedTitle1}}'></e-series>
-            <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data1' name='{{stackedTitle2}}'></e-series>
-            <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data2' name='{{stackedTitle3}}'></e-series>
-            <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data3' name='{{stackedTitle4}}'></e-series>
-            <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data4' name='{{stackedTitle5}}'></e-series>
-            <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data5' name='{{stackedTitle6}}'></e-series>
-        </e-series-collection>
-    </ejs-chart>
+          <ejs-chart #chart *ngIf="lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
+            [primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom'
+            [tooltip]='tooltip' [palettes]='palette'>
+            <e-series-collection>
+              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data'
+                name='{{stackedTitle1}}'></e-series>
+              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data1'
+                name='{{stackedTitle2}}'></e-series>
+              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data2'
+                name='{{stackedTitle3}}'></e-series>
+              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data3'
+                name='{{stackedTitle4}}'></e-series>
+              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data4'
+                name='{{stackedTitle5}}'></e-series>
+              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data5'
+                name='{{stackedTitle6}}'></e-series>
+            </e-series-collection>
+          </ejs-chart>
 
         </div>
       </div>
@@ -159,7 +184,7 @@
               <h3 class="mb-0">Filter By</h3>
             </div>
             <div class="col text-right">
-              <a href="#!" class="btn btn-sm btn-primary" (click)="exportChart()">Export</a>
+              <a href="javascript:void(0)" class="btn btn-sm btn-primary" (click)="exportChart()">Export</a>
             </div>
           </div>
         </div>
@@ -188,7 +213,7 @@
                           <option value="StackingColumn">Stacked Column Chart</option>
                           <option value="StepLine">StepLine Chart</option>
                           <option value="Scatter">Scatter Chart</option>
-                          <option value="Line">Line Chart</option> 
+                          <option value="Line">Line Chart</option>
                           <option value="StackingLine">StackingLine Chart</option>
                           <option value="Spline">Spline Chart</option>
                           <option value="Area">Area Chart</option>
