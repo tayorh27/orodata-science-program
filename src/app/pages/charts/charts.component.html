@@ -126,7 +126,7 @@
         <div class="card-body">
           <ejs-treemap id='container' #treemap style="display:block;" [titleSettings]='titleSettings'
             [dataSource]='dataSource' [weightValuePath]='weightValuePath' [tooltipSettings]='tooltipSettings'
-            [treemapPalette]='palette' [legendSettings]='legendSettings' [leafItemSettings]='leafItemSettings' format='n'
+            [palette]='treemapPalette' [legendSettings]='legendSettings' [leafItemSettings]='leafItemSettings' format='n'
             useGroupingSeparator="true" (load)='load($event)'>
             <e-levels>
               <e-level groupPath='state' [border]='border'>
