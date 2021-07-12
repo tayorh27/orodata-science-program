@@ -5,7 +5,7 @@ import Chart from 'chart.js';
 import { economicData, economicData2 } from "../../economy-data";
 import { DummyData } from "../../population-data";
 import { ChartComponent } from '@syncfusion/ej2-angular-charts';
-import { TreeMap, TreeMapTooltip, TreeMapLegend } from '@syncfusion/ej2-angular-treemap';
+import { TreeMap, TreeMapTooltip, TreeMapLegend, TreeMapComponent } from '@syncfusion/ej2-angular-treemap';
 import { IItemMoveEventArgs, ILoadEventArgs, TreeMapTheme, IItemClickEventArgs } from '@syncfusion/ej2-angular-treemap';
 TreeMap.Inject(TreeMapTooltip, TreeMapLegend);
 
@@ -131,6 +131,7 @@ export class MyChartComponent implements OnInit {
     chartType = "Column"
 
     @ViewChild('chart') public chart: ChartComponent;
+    @ViewChild('treemap') public treemap: TreeMapComponent;
 
     onChartTypeChange(evt: any) {
         if (evt.target.value === "none") {
@@ -488,6 +489,7 @@ export class MyChartComponent implements OnInit {
                     "data": val.Debt_Stock_2019_External_Debt
                 })
             })
+            this.treemap.refresh()
             this.palette = ["#d93b4a"]
             // this.chart.refresh()
             return
@@ -601,7 +603,8 @@ export class MyChartComponent implements OnInit {
     public stackedTitle6 = ""
 
     ngOnInit() {
-
+        // this.treemap.refresh()
+        
         const option = this.subDataTracker.find((val, arr, ind) => {
             return val.name === "health"
         })
