@@ -486,7 +486,7 @@ export class MyChartComponent implements OnInit {
             economicData.forEach((val) => {
                 this.dataSource.push({
                     "state": val.x,
-                    "data": val.Debt_Stock_2019_External_Debt
+                    "data": (val.x === "Lagos") ? 0 : val.Debt_Stock_2019_External_Debt
                 })
             })
             this.treemap.refresh()
