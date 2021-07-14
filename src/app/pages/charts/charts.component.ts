@@ -604,7 +604,7 @@ export class MyChartComponent implements OnInit {
 
     ngOnInit() {
         // this.treemap.refresh()
-        
+        this.excelBlaise()
         const option = this.subDataTracker.find((val, arr, ind) => {
             return val.name === "health"
         })
@@ -631,6 +631,29 @@ export class MyChartComponent implements OnInit {
             enableSelectionZooming: true,
             enablePan: true
         };
+    }
+
+
+    excelBlaise() {
+        var header = ""
+        var items = ""
+
+        for(const key in economicData[0]) {
+            header += `${key},`
+        }
+
+        economicData.forEach(data => {
+            for(const key in data) {
+                if(key !== "Total_Debt_Trend_2014_2019") {
+                    items += `${data[key]},`
+                }else {
+                    items += `${data[key].join(",")}\n`
+                }
+            }
+        })
+
+        console.log(header)
+        console.log(items)
     }
 
     onChartEvent(event: any, type: string) {
