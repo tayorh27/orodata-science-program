@@ -112,112 +112,112 @@ export const economicData: any[] = [
 
 export const economicData2: any[] = [
     {
-        x: "Abia", "Year_Growth_Analyis_IGR": 19.38, "Year_Growth_Analyis_Net_FACC": -5.33, "Structure_of_State_Available_Revenue_IGR": 22.11, "Structure_of_State_Available_Revenue_Net_FACC": 77.89,
+        "x": "Abia", "Year_Growth_Analyis_IGR": 19.38, "Year_Growth_Analyis_Net_FACC": -5.33, "Structure_of_State_Available_Revenue_IGR": 22.11, "Structure_of_State_Available_Revenue_Net_FACC": 77.89,
     },
     {
-        x: "Adamawa", "Year_Growth_Analyis_IGR": 94.31, "Year_Growth_Analyis_Net_FACC": -5.06, "Structure_of_State_Available_Revenue_IGR": 16.72, "Structure_of_State_Available_Revenue_Net_FACC": 83.28,
+        "x": "Adamawa", "Year_Growth_Analyis_IGR": 94.31, "Year_Growth_Analyis_Net_FACC": -5.06, "Structure_of_State_Available_Revenue_IGR": 16.72, "Structure_of_State_Available_Revenue_Net_FACC": 83.28,
     },
     {
-        x: "Akwa-Ibom", "Year_Growth_Analyis_IGR": 105.98, "Year_Growth_Analyis_Net_FACC": -33.43, "Structure_of_State_Available_Revenue_IGR": 15.81, "Structure_of_State_Available_Revenue_Net_FACC": 84.19,
+        "x": "Akwa-Ibom", "Year_Growth_Analyis_IGR": 105.98, "Year_Growth_Analyis_Net_FACC": -33.43, "Structure_of_State_Available_Revenue_IGR": 15.81, "Structure_of_State_Available_Revenue_Net_FACC": 84.19,
     },
     {
-        x: "Anambra", "Year_Growth_Analyis_IGR": 152.23, "Year_Growth_Analyis_Net_FACC": 3.24, "Structure_of_State_Available_Revenue_IGR": 32.85, "Structure_of_State_Available_Revenue_Net_FACC": 67.15,
+        "x": "Anambra", "Year_Growth_Analyis_IGR": 152.23, "Year_Growth_Analyis_Net_FACC": 3.24, "Structure_of_State_Available_Revenue_IGR": 32.85, "Structure_of_State_Available_Revenue_Net_FACC": 67.15,
     },
     {
-        x: "Bauchi", "Year_Growth_Analyis_IGR": 141.00, "Year_Growth_Analyis_Net_FACC": -8.55, "Structure_of_State_Available_Revenue_IGR": 18.26, "Structure_of_State_Available_Revenue_Net_FACC": 81.74,
+        "x": "Bauchi", "Year_Growth_Analyis_IGR": 141.00, "Year_Growth_Analyis_Net_FACC": -8.55, "Structure_of_State_Available_Revenue_IGR": 18.26, "Structure_of_State_Available_Revenue_Net_FACC": 81.74,
     },
     {
-        x: "Bayelsa", "Year_Growth_Analyis_IGR": 49.14, "Year_Growth_Analyis_Net_FACC": -7.15, "Structure_of_State_Available_Revenue_IGR": 10.44, "Structure_of_State_Available_Revenue_Net_FACC": 89.56,
+        "x": "Bayelsa", "Year_Growth_Analyis_IGR": 49.14, "Year_Growth_Analyis_Net_FACC": -7.15, "Structure_of_State_Available_Revenue_IGR": 10.44, "Structure_of_State_Available_Revenue_Net_FACC": 89.56,
 
     },
     {
-        x: "Benue", "Year_Growth_Analyis_IGR": 115.47, "Year_Growth_Analyis_Net_FACC": 2.93, "Structure_of_State_Available_Revenue_IGR": 24.73, "Structure_of_State_Available_Revenue_Net_FACC": 75.27,
+        "x": "Benue", "Year_Growth_Analyis_IGR": 115.47, "Year_Growth_Analyis_Net_FACC": 2.93, "Structure_of_State_Available_Revenue_IGR": 24.73, "Structure_of_State_Available_Revenue_Net_FACC": 75.27,
     },
     {
-        x: "Borno", "Year_Growth_Analyis_IGR": 196.12, "Year_Growth_Analyis_Net_FACC": -2.40, "Structure_of_State_Available_Revenue_IGR": 11.70, "Structure_of_State_Available_Revenue_Net_FACC": 88.30,
+        "x": "Borno", "Year_Growth_Analyis_IGR": 196.12, "Year_Growth_Analyis_Net_FACC": -2.40, "Structure_of_State_Available_Revenue_IGR": 11.70, "Structure_of_State_Available_Revenue_Net_FACC": 88.30,
     },
     {
-        x: "Cross River", "Year_Growth_Analyis_IGR": 43.58, "Year_Growth_Analyis_Net_FACC": -27.06, "Structure_of_State_Available_Revenue_IGR": 38.36, "Structure_of_State_Available_Revenue_Net_FACC": 61.64,
+        "x": "Cross River", "Year_Growth_Analyis_IGR": 43.58, "Year_Growth_Analyis_Net_FACC": -27.06, "Structure_of_State_Available_Revenue_IGR": 38.36, "Structure_of_State_Available_Revenue_Net_FACC": 61.64,
     },
     {
-        x: "Delta", "Year_Growth_Analyis_IGR": 51.05, "Year_Growth_Analyis_Net_FACC": 16.11, "Structure_of_State_Available_Revenue_IGR": 22.78, "Structure_of_State_Available_Revenue_Net_FACC": 77.22,
+        "x": "Delta", "Year_Growth_Analyis_IGR": 51.05, "Year_Growth_Analyis_Net_FACC": 16.11, "Structure_of_State_Available_Revenue_IGR": 22.78, "Structure_of_State_Available_Revenue_Net_FACC": 77.22,
     },
     {
-        x: "Ebonyi", "Year_Growth_Analyis_IGR": -32.42, "Year_Growth_Analyis_Net_FACC": 13.08, "Structure_of_State_Available_Revenue_IGR": 14.31, "Structure_of_State_Available_Revenue_Net_FACC": 85.69,
+        "x": "Ebonyi", "Year_Growth_Analyis_IGR": -32.42, "Year_Growth_Analyis_Net_FACC": 13.08, "Structure_of_State_Available_Revenue_IGR": 14.31, "Structure_of_State_Available_Revenue_Net_FACC": 85.69,
     },
     {
-        x: "Edo", "Year_Growth_Analyis_IGR": 73.16, "Year_Growth_Analyis_Net_FACC": 11.41, "Structure_of_State_Available_Revenue_IGR": 31.31, "Structure_of_State_Available_Revenue_Net_FACC": 68.69,
+        "x": "Edo", "Year_Growth_Analyis_IGR": 73.16, "Year_Growth_Analyis_Net_FACC": 11.41, "Structure_of_State_Available_Revenue_IGR": 31.31, "Structure_of_State_Available_Revenue_Net_FACC": 68.69,
     },
     {
-        x: "Ekiti", "Year_Growth_Analyis_IGR": 146.85, "Year_Growth_Analyis_Net_FACC": 2.96, "Structure_of_State_Available_Revenue_IGR": 17.15, "Structure_of_State_Available_Revenue_Net_FACC": 82.85,
+        "x": "Ekiti", "Year_Growth_Analyis_IGR": 146.85, "Year_Growth_Analyis_Net_FACC": 2.96, "Structure_of_State_Available_Revenue_IGR": 17.15, "Structure_of_State_Available_Revenue_Net_FACC": 82.85,
     },
     {
-        x: "Enugu", "Year_Growth_Analyis_IGR": 61.40, "Year_Growth_Analyis_Net_FACC": 0.54, "Structure_of_State_Available_Revenue_IGR": 37.41, "Structure_of_State_Available_Revenue_Net_FACC": 62.59,
+        "x": "Enugu", "Year_Growth_Analyis_IGR": 61.40, "Year_Growth_Analyis_Net_FACC": 0.54, "Structure_of_State_Available_Revenue_IGR": 37.41, "Structure_of_State_Available_Revenue_Net_FACC": 62.59,
     },
     {
-        x: "Gombe", "Year_Growth_Analyis_IGR": 30.92, "Year_Growth_Analyis_Net_FACC": -2.64, "Structure_of_State_Available_Revenue_IGR": 14.32, "Structure_of_State_Available_Revenue_Net_FACC": 85.77,
+        "x": "Gombe", "Year_Growth_Analyis_IGR": 30.92, "Year_Growth_Analyis_Net_FACC": -2.64, "Structure_of_State_Available_Revenue_IGR": 14.32, "Structure_of_State_Available_Revenue_Net_FACC": 85.77,
     },
     {
-        x: "Imo", "Year_Growth_Analyis_IGR": 98.32, "Year_Growth_Analyis_Net_FACC": 0.53, "Structure_of_State_Available_Revenue_IGR": 22.30, "Structure_of_State_Available_Revenue_Net_FACC": 77.70,
+        "x": "Imo", "Year_Growth_Analyis_IGR": 98.32, "Year_Growth_Analyis_Net_FACC": 0.53, "Structure_of_State_Available_Revenue_IGR": 22.30, "Structure_of_State_Available_Revenue_Net_FACC": 77.70,
     },
     {
-        x: "Jigawa", "Year_Growth_Analyis_IGR": 106.06, "Year_Growth_Analyis_Net_FACC": 1.45, "Structure_of_State_Available_Revenue_IGR": 18.01, "Structure_of_State_Available_Revenue_Net_FACC": 81.99,
+        "x": "Jigawa", "Year_Growth_Analyis_IGR": 106.06, "Year_Growth_Analyis_Net_FACC": 1.45, "Structure_of_State_Available_Revenue_IGR": 18.01, "Structure_of_State_Available_Revenue_Net_FACC": 81.99,
     },
     {
-        x: "Kaduna", "Year_Growth_Analyis_IGR": 251.70, "Year_Growth_Analyis_Net_FACC": 6.52, "Structure_of_State_Available_Revenue_IGR": 40.12, "Structure_of_State_Available_Revenue_Net_FACC": 59.88,
+        "x": "Kaduna", "Year_Growth_Analyis_IGR": 251.70, "Year_Growth_Analyis_Net_FACC": 6.52, "Structure_of_State_Available_Revenue_IGR": 40.12, "Structure_of_State_Available_Revenue_Net_FACC": 59.88,
     },
     {
-        x: "Kano", "Year_Growth_Analyis_IGR": 197.13, "Year_Growth_Analyis_Net_FACC": 0.22, "Structure_of_State_Available_Revenue_IGR": 32.98, "Structure_of_State_Available_Revenue_Net_FACC": 67.02,
+        "x": "Kano", "Year_Growth_Analyis_IGR": 197.13, "Year_Growth_Analyis_Net_FACC": 0.22, "Structure_of_State_Available_Revenue_IGR": 32.98, "Structure_of_State_Available_Revenue_Net_FACC": 67.02,
     },
     {
-        x: "Katsina", "Year_Growth_Analyis_IGR": 36.54, "Year_Growth_Analyis_Net_FACC": -0.19, "Structure_of_State_Available_Revenue_IGR": 11.84, "Structure_of_State_Available_Revenue_Net_FACC": 88.16,
+        "x": "Katsina", "Year_Growth_Analyis_IGR": 36.54, "Year_Growth_Analyis_Net_FACC": -0.19, "Structure_of_State_Available_Revenue_IGR": 11.84, "Structure_of_State_Available_Revenue_Net_FACC": 88.16,
     },
     {
-        x: "Kebbi", "Year_Growth_Analyis_IGR": 92.15, "Year_Growth_Analyis_Net_FACC": -1.86, "Structure_of_State_Available_Revenue_IGR": 12.22, "Structure_of_State_Available_Revenue_Net_FACC": 87.78,
+        "x": "Kebbi", "Year_Growth_Analyis_IGR": 92.15, "Year_Growth_Analyis_Net_FACC": -1.86, "Structure_of_State_Available_Revenue_IGR": 12.22, "Structure_of_State_Available_Revenue_Net_FACC": 87.78,
     },
     {
-        x: "Kogi", "Year_Growth_Analyis_IGR": 149.46, "Year_Growth_Analyis_Net_FACC": -4.53, "Structure_of_State_Available_Revenue_IGR": 23.85, "Structure_of_State_Available_Revenue_Net_FACC": 76.15,
+        "x": "Kogi", "Year_Growth_Analyis_IGR": 149.46, "Year_Growth_Analyis_Net_FACC": -4.53, "Structure_of_State_Available_Revenue_IGR": 23.85, "Structure_of_State_Available_Revenue_Net_FACC": 76.15,
     },
     {
-        x: "Kwara", "Year_Growth_Analyis_IGR": 145.95, "Year_Growth_Analyis_Net_FACC": -4.41, "Structure_of_State_Available_Revenue_IGR": 41.94, "Structure_of_State_Available_Revenue_Net_FACC": 58.06,
+        "x": "Kwara", "Year_Growth_Analyis_IGR": 145.95, "Year_Growth_Analyis_Net_FACC": -4.41, "Structure_of_State_Available_Revenue_IGR": 41.94, "Structure_of_State_Available_Revenue_Net_FACC": 58.06,
     },
     {
-        x: "Lagos", "Year_Growth_Analyis_IGR": 44.38, "Year_Growth_Analyis_Net_FACC": 12.26, "Structure_of_State_Available_Revenue_IGR": 77.18, "Structure_of_State_Available_Revenue_Net_FACC": 22.82,
+        "x": "Lagos", "Year_Growth_Analyis_IGR": 44.38, "Year_Growth_Analyis_Net_FACC": 12.26, "Structure_of_State_Available_Revenue_IGR": 77.18, "Structure_of_State_Available_Revenue_Net_FACC": 22.82,
     },
     {
-        x: "Nasarawa", "Year_Growth_Analyis_IGR": 165.81, "Year_Growth_Analyis_Net_FACC": 0.01, "Structure_of_State_Available_Revenue_IGR": 19.49, "Structure_of_State_Available_Revenue_Net_FACC": 80.51,
+        "x": "Nasarawa", "Year_Growth_Analyis_IGR": 165.81, "Year_Growth_Analyis_Net_FACC": 0.01, "Structure_of_State_Available_Revenue_IGR": 19.49, "Structure_of_State_Available_Revenue_Net_FACC": 80.51,
     },
     {
-        x: "Niger", "Year_Growth_Analyis_IGR": 122.50, "Year_Growth_Analyis_Net_FACC": 6.28, "Structure_of_State_Available_Revenue_IGR": 18.44, "Structure_of_State_Available_Revenue_Net_FACC": 81.56,
+        "x": "Niger", "Year_Growth_Analyis_IGR": 122.50, "Year_Growth_Analyis_Net_FACC": 6.28, "Structure_of_State_Available_Revenue_IGR": 18.44, "Structure_of_State_Available_Revenue_Net_FACC": 81.56,
     },
     {
-        x: "Ogun", "Year_Growth_Analyis_IGR": 305.33, "Year_Growth_Analyis_Net_FACC": -20.92, "Structure_of_State_Available_Revenue_IGR": 64.69, "Structure_of_State_Available_Revenue_Net_FACC": 35.31,
+        "x": "Ogun", "Year_Growth_Analyis_IGR": 305.33, "Year_Growth_Analyis_Net_FACC": -20.92, "Structure_of_State_Available_Revenue_IGR": 64.69, "Structure_of_State_Available_Revenue_Net_FACC": 35.31,
     },
     {
-        x: "Ondo", "Year_Growth_Analyis_IGR": 157.16, "Year_Growth_Analyis_Net_FACC": -12.87, "Structure_of_State_Available_Revenue_IGR": 34.22, "Structure_of_State_Available_Revenue_Net_FACC": 65.78,
+        "x": "Ondo", "Year_Growth_Analyis_IGR": 157.16, "Year_Growth_Analyis_Net_FACC": -12.87, "Structure_of_State_Available_Revenue_IGR": 34.22, "Structure_of_State_Available_Revenue_Net_FACC": 65.78,
     },
     {
-        x: "Osun", "Year_Growth_Analyis_IGR": 110.52, "Year_Growth_Analyis_Net_FACC": -32.70, "Structure_of_State_Available_Revenue_IGR": 42.53, "Structure_of_State_Available_Revenue_Net_FACC": 57.47,
+        "x": "Osun", "Year_Growth_Analyis_IGR": 110.52, "Year_Growth_Analyis_Net_FACC": -32.70, "Structure_of_State_Available_Revenue_IGR": 42.53, "Structure_of_State_Available_Revenue_Net_FACC": 57.47,
     },
     {
-        x: "Oyo", "Year_Growth_Analyis_IGR": 64.02, "Year_Growth_Analyis_Net_FACC": -2.82, "Structure_of_State_Available_Revenue_IGR": 32.4, "Structure_of_State_Available_Revenue_Net_FACC": 67.6,
+        "x": "Oyo", "Year_Growth_Analyis_IGR": 64.02, "Year_Growth_Analyis_Net_FACC": -2.82, "Structure_of_State_Available_Revenue_IGR": 32.4, "Structure_of_State_Available_Revenue_Net_FACC": 67.6,
     },
     {
-        x: "Plateau", "Year_Growth_Analyis_IGR": 98.93, "Year_Growth_Analyis_Net_FACC": -19.51, "Structure_of_State_Available_Revenue_IGR": 28.07, "Structure_of_State_Available_Revenue_Net_FACC": 71.93,
+        "x": "Plateau", "Year_Growth_Analyis_IGR": 98.93, "Year_Growth_Analyis_Net_FACC": -19.51, "Structure_of_State_Available_Revenue_IGR": 28.07, "Structure_of_State_Available_Revenue_Net_FACC": 71.93,
     },
     {
-        x: "Rivers", "Year_Growth_Analyis_IGR": 57.55, "Year_Growth_Analyis_Net_FACC": -13.97, "Structure_of_State_Available_Revenue_IGR": 46.98, "Structure_of_State_Available_Revenue_Net_FACC": 53.02,
+        "x": "Rivers", "Year_Growth_Analyis_IGR": 57.55, "Year_Growth_Analyis_Net_FACC": -13.97, "Structure_of_State_Available_Revenue_IGR": 46.98, "Structure_of_State_Available_Revenue_Net_FACC": 53.02,
     },
     {
-        x: "Sokoto", "Year_Growth_Analyis_IGR": 238.30, "Year_Growth_Analyis_Net_FACC": -1.18, "Structure_of_State_Available_Revenue_IGR": 25.52, "Structure_of_State_Available_Revenue_Net_FACC": 74.48,
+        "x": "Sokoto", "Year_Growth_Analyis_IGR": 238.30, "Year_Growth_Analyis_Net_FACC": -1.18, "Structure_of_State_Available_Revenue_IGR": 25.52, "Structure_of_State_Available_Revenue_Net_FACC": 74.48,
     },
     {
-        x: "Taraba", "Year_Growth_Analyis_IGR": 71.97, "Year_Growth_Analyis_Net_FACC": -5.04, "Structure_of_State_Available_Revenue_IGR": 12.32, "Structure_of_State_Available_Revenue_Net_FACC": 87.68,
+        "x": "Taraba", "Year_Growth_Analyis_IGR": 71.97, "Year_Growth_Analyis_Net_FACC": -5.04, "Structure_of_State_Available_Revenue_IGR": 12.32, "Structure_of_State_Available_Revenue_Net_FACC": 87.68,
     },
     {
-        x: "Yobe", "Year_Growth_Analyis_IGR": 174.73, "Year_Growth_Analyis_Net_FACC": 1.65, "Structure_of_State_Available_Revenue_IGR": 14.06, "Structure_of_State_Available_Revenue_Net_FACC": 85.94,
+        "x": "Yobe", "Year_Growth_Analyis_IGR": 174.73, "Year_Growth_Analyis_Net_FACC": 1.65, "Structure_of_State_Available_Revenue_IGR": 14.06, "Structure_of_State_Available_Revenue_Net_FACC": 85.94,
     },
     {
-        x: "Zamfara", "Year_Growth_Analyis_IGR": 389.46, "Year_Growth_Analyis_Net_FACC": -18.51, "Structure_of_State_Available_Revenue_IGR": 26.96, "Structure_of_State_Available_Revenue_Net_FACC": 73.04,
+        "x": "Zamfara", "Year_Growth_Analyis_IGR": 389.46, "Year_Growth_Analyis_Net_FACC": -18.51, "Structure_of_State_Available_Revenue_IGR": 26.96, "Structure_of_State_Available_Revenue_Net_FACC": 73.04,
     },
 ]

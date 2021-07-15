@@ -311,7 +311,7 @@ export class MyChartComponent implements OnInit {
             this.lineChart = false
             this.stackedTitle1 = "6-Year Growth Analyis[2014 - 2019] - IGR (%)"
             this.stackedTitle2 = "6-Year Growth Analyis[2014 - 2019] - NET FACC (%)"
-            economicData.forEach((val) => {
+            economicData2.forEach((val) => {
                 this.chartData.push({
                     "state": val.x,
                     "data": val.Year_Growth_Analyis_IGR,
@@ -335,7 +335,7 @@ export class MyChartComponent implements OnInit {
             this.lineChart = false
             this.stackedTitle1 = "Structure of State Available Revenue[2019] - IGR (%)"
             this.stackedTitle2 = "Structure of State Available Revenue[2019] - NET FACC (%)"
-            economicData.forEach((val) => {
+            economicData2.forEach((val) => {
                 this.chartData.push({
                     "state": val.x,
                     "data": val.Structure_of_State_Available_Revenue_IGR,
@@ -359,7 +359,7 @@ export class MyChartComponent implements OnInit {
             this.lineChart = false
             this.stackedTitle1 = "Total Revenue (NGN)"
             this.stackedTitle2 = "Recurrent Expenditure (NGN)"
-            economicData.forEach((val) => {
+            economicData2.forEach((val) => {
                 this.chartData.push({
                     "state": val.x,
                     "data": val.Ability_to_meet_Recurrent_Expenditure_total_revenue,
@@ -638,16 +638,16 @@ export class MyChartComponent implements OnInit {
         var header = ""
         var items = ""
 
-        for(const key in economicData[0]) {
+        for(const key in new DummyData().mapData[0]) {
             header += `${key},`
         }
 
-        economicData.forEach(data => {
+        new DummyData().mapData.forEach(data => {
             for(const key in data) {
-                if(key !== "Total_Debt_Trend_2014_2019") {
+                if(key !== "covid_support") {
                     items += `${data[key]},`
                 }else {
-                    items += `${data[key].join(",")}\n`
+                    items += `${data[key]}\n`
                 }
             }
         })
