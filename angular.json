@@ -44,7 +44,14 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                   "minify": false,
+                   "inlineCritical": false
+                },
+                "fonts": true
+              },
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
@@ -63,6 +70,7 @@
           },
           "configurations": {
             "production": {
+              "optimization": false,
               "browserTarget": "argon-dashboard-angular:build:production"
             }
           }

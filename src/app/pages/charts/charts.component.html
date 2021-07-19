@@ -124,55 +124,68 @@
           </div>
         </div>
         <div class="card-body">
-          <ejs-treemap id='container' #treemap style="display:block;" [titleSettings]='titleSettings'
-            [dataSource]='dataSource' [weightValuePath]='weightValuePath' [tooltipSettings]='tooltipSettings'
-            [palette]='treemapPalette' [legendSettings]='legendSettings' [leafItemSettings]='leafItemSettings' format='n'
-            useGroupingSeparator="true" (load)='load($event)'>
-            <e-levels>
-              <e-level groupPath='state' [border]='border'>
-              </e-level>
-            </e-levels>
-          </ejs-treemap>
+          <div *ngIf="dataSelection === '2019 External Debt (USD)'">
+            <ejs-treemap id='container' #treemap2 style="display:block;" [titleSettings]='titleSettings'
+              [dataSource]='dataSource2' [weightValuePath]='weightValuePath' [tooltipSettings]='tooltipSettings'
+              [palette]='treemapPalette' [legendSettings]='legendSettings' [leafItemSettings]='leafItemSettings'
+              format='n' useGroupingSeparator="true" (load)='load($event)'>
+              <e-levels>
+                <e-level groupPath='state' [border]='border'>
+                </e-level>
+              </e-levels>
+            </ejs-treemap>
+            <ejs-treemap id='container' #treemap style="display:block;" [titleSettings]='titleSettings'
+              [dataSource]='dataSource' [weightValuePath]='weightValuePath' [tooltipSettings]='tooltipSettings'
+              [palette]='treemapPalette' [legendSettings]='legendSettings' [leafItemSettings]='leafItemSettings'
+              format='n' useGroupingSeparator="true" (load)='load($event)'>
+              <e-levels>
+                <e-level groupPath='state' [border]='border'>
+                </e-level>
+              </e-levels>
+            </ejs-treemap>
+          </div>
 
-          <ejs-chart #chart *ngIf="!stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
-            [legendSettings]="legend" [title]='chartTitle' [tooltip]='tooltip' [zoomSettings]='zoom'
-            [palettes]='palette'>
-            <e-series-collection>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName="data" name="{{chartTitle}}">
-              </e-series>
-            </e-series-collection>
-          </ejs-chart>
+          <div *ngIf="dataSelection !== '2019 External Debt (USD)'">
+            <ejs-chart #chart *ngIf="!stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
+              [legendSettings]="legend" [title]='chartTitle' [tooltip]='tooltip' [zoomSettings]='zoom'
+              [palettes]='palette'>
+              <e-series-collection>
+                <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName="data"
+                  name="{{chartTitle}}">
+                </e-series>
+              </e-series-collection>
+            </ejs-chart>
 
-          <ejs-chart #chart *ngIf="stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
-            [primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom'
-            [title]='title' [tooltip]='tooltip' [palettes]='palette'>
-            <e-series-collection>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data'
-                name='{{stackedTitle1}}'></e-series>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data1'
-                name='{{stackedTitle2}}'></e-series>
-            </e-series-collection>
-          </ejs-chart>
+            <ejs-chart #chart *ngIf="stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
+              [primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom'
+              [title]='title' [tooltip]='tooltip' [palettes]='palette'>
+              <e-series-collection>
+                <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data'
+                  name='{{stackedTitle1}}'></e-series>
+                <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data1'
+                  name='{{stackedTitle2}}'></e-series>
+              </e-series-collection>
+            </ejs-chart>
 
-          <ejs-chart #chart *ngIf="lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
-            [primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom'
-            [tooltip]='tooltip' [palettes]='palette'>
-            <e-series-collection>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data'
-                name='{{stackedTitle1}}'></e-series>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data1'
-                name='{{stackedTitle2}}'></e-series>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data2'
-                name='{{stackedTitle3}}'></e-series>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data3'
-                name='{{stackedTitle4}}'></e-series>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data4'
-                name='{{stackedTitle5}}'></e-series>
-              <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data5'
-                name='{{stackedTitle6}}'></e-series>
-            </e-series-collection>
-          </ejs-chart>
-
+            <ejs-chart #chart *ngIf="lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
+              [primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom'
+              [tooltip]='tooltip' [palettes]='palette'>
+              <e-series-collection>
+                <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data'
+                  name='{{stackedTitle1}}'></e-series>
+                <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data1'
+                  name='{{stackedTitle2}}'></e-series>
+                <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data2'
+                  name='{{stackedTitle3}}'></e-series>
+                <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data3'
+                  name='{{stackedTitle4}}'></e-series>
+                <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data4'
+                  name='{{stackedTitle5}}'></e-series>
+                <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data5'
+                  name='{{stackedTitle6}}'></e-series>
+              </e-series-collection>
+            </ejs-chart>
+          </div>
         </div>
       </div>
     </div>

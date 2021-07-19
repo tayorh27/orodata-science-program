@@ -45,6 +45,7 @@ export class MyChartComponent implements OnInit {
         shape: 'Rectangle'
     };
     dataSource: object[] = [];
+    dataSource2: object[] = [];
     weightValuePath: string = 'data';
     treemapPalette: string[] = ['#C33764', '#AB3566', '#993367', '#853169', '#742F6A', '#632D6C', '#532C6D', '#412A6F', '#312870', '#1D2671'];
     leafItemSettings: object = {
@@ -132,6 +133,7 @@ export class MyChartComponent implements OnInit {
 
     @ViewChild('chart') public chart: ChartComponent;
     @ViewChild('treemap') public treemap: TreeMapComponent;
+    @ViewChild('treemap2') public treemap2: TreeMapComponent;
 
     onChartTypeChange(evt: any) {
         if (evt.target.value === "none") {
@@ -142,6 +144,11 @@ export class MyChartComponent implements OnInit {
     }
 
     exportChart() {
+        if(this.dataSelection === '2019 External Debt (USD)'){
+            this.treemap.export('PNG', `export-${new Date().toLocaleTimeString()}`)
+            this.treemap2.export('PNG', `export-${new Date().toLocaleTimeString()}`)
+            return
+        }
         this.chart.exportModule.export('PNG', `export-${new Date().toLocaleTimeString()}`);
     }
 
@@ -484,10 +491,18 @@ export class MyChartComponent implements OnInit {
             // this.viewChartForEconomyStacked("Domestic Debt (NGN)", "External Debt (USD)", data1, data2, false, true, ["#","#d93b4a"])
             this.chartTitle = "2019 External Debt (USD)"
             economicData.forEach((val) => {
-                this.dataSource.push({
-                    "state": val.x,
-                    "data": (val.x === "Lagos") ? 0 : val.Debt_Stock_2019_External_Debt
-                })
+                if(val.x === "Lagos") {
+                    this.dataSource2.push({
+                        "state": val.x,
+                        "data": val.Debt_Stock_2019_External_Debt
+                    })
+                }else{
+                    this.dataSource.push({
+                        "state": val.x,
+                        "data": val.Debt_Stock_2019_External_Debt
+                        // "data": (val.x === "Lagos") ? 0 : val.Debt_Stock_2019_External_Debt
+                    })
+                }
             })
             this.treemap.refresh()
             this.palette = ["#d93b4a"]
@@ -604,7 +619,7 @@ export class MyChartComponent implements OnInit {
 
     ngOnInit() {
         // this.treemap.refresh()
-        this.excelBlaise()
+        // this.excelBlaise()
         const option = this.subDataTracker.find((val, arr, ind) => {
             return val.name === "health"
         })
