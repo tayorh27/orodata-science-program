@@ -366,7 +366,7 @@ export class MyChartComponent implements OnInit {
             this.lineChart = false
             this.stackedTitle1 = "Total Revenue (NGN)"
             this.stackedTitle2 = "Recurrent Expenditure (NGN)"
-            economicData2.forEach((val) => {
+            economicData.forEach((val) => {
                 this.chartData.push({
                     "state": val.x,
                     "data": val.Ability_to_meet_Recurrent_Expenditure_total_revenue,
@@ -504,7 +504,10 @@ export class MyChartComponent implements OnInit {
                     })
                 }
             })
-            this.treemap.refresh()
+            setTimeout(()=>{
+                this.treemap.refresh()
+                this.treemap2.refresh()
+            }, 1000)
             this.palette = ["#d93b4a"]
             // this.chart.refresh()
             return

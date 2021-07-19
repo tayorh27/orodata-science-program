@@ -125,7 +125,7 @@
         </div>
         <div class="card-body">
           <div *ngIf="dataSelection === '2019 External Debt (USD)'">
-            <ejs-treemap id='container' #treemap2 style="display:block;" [titleSettings]='titleSettings'
+            <ejs-treemap id='container2' #treemap2 style="display:block;" [titleSettings]='titleSettings'
               [dataSource]='dataSource2' [weightValuePath]='weightValuePath' [tooltipSettings]='tooltipSettings'
               [palette]='treemapPalette' [legendSettings]='legendSettings' [leafItemSettings]='leafItemSettings'
               format='n' useGroupingSeparator="true" (load)='load($event)'>
@@ -134,6 +134,9 @@
                 </e-level>
               </e-levels>
             </ejs-treemap>
+            <br>
+            <br>
+            <br>
             <ejs-treemap id='container' #treemap style="display:block;" [titleSettings]='titleSettings'
               [dataSource]='dataSource' [weightValuePath]='weightValuePath' [tooltipSettings]='tooltipSettings'
               [palette]='treemapPalette' [legendSettings]='legendSettings' [leafItemSettings]='leafItemSettings'

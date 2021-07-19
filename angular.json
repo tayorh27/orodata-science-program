@@ -70,7 +70,6 @@
           },
           "configurations": {
             "production": {
-              "optimization": false,
               "browserTarget": "argon-dashboard-angular:build:production"
             }
           }
