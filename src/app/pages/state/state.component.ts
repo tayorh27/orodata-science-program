@@ -90,6 +90,8 @@ export class StateComponent implements OnInit {
     this.displayDataBySectorH = []
     this.displayDataBySectorD = []
     this.displayDataBySectorE = []
+    this.displayDataBySectorG = []
+    this.displayDataBySectorF = []
 
     this.displayDataBySectorH.push(
       {title: "Total Confirmed Covid-19 Cases", value: this.formatNumbers(others.cases)},

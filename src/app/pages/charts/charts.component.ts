@@ -79,7 +79,7 @@ export class MyChartComponent implements OnInit {
         { "name": "health", "options": ["-", "Total Confirmed Covid-19 Cases", "Total Confirmed Deaths", "Vaccination Logistics Expenditure"] },
         { "name": "demography", "options": ["-", "Life Expectancy", "Share of Population Living in Extreme Poverty", "Population Density", "Total Population"] },
         { "name": "economy", "options": ["-", "Revenue Analysis", "6-Year Growth Analyis", "Structure of State Available Revenue", "2019 Ability to Meet Recurrent Expenditure", "Actual Expenditure 2019", "Health Budget", "Actual Capital Expenditure", "Total Debt", "2019 Domestic Debt (NGN)", "2019 External Debt (USD)", "Debt Growth", "Debt Size", "Total Debt Trend (2014 - 2019)"] },
-        { "name": "governance", "options": ["-","FGN Covid-19 Support to State", "State Budget Allocations", "Covid-Support Measures", "Income Support Measures"] },
+        { "name": "governance", "options": ["-", "FGN Covid-19 Support to State", "State Budget Allocations", "Covid-Support Measures", "Income Support Measures"] },
         { "name": "food", "options": ["-", "Food Inflation", "People with Insufficient Food Intake", "Children under the age of 5 with acute malnutrition", "Children under 5 with chronic malnutrition"] }
     ]
 
@@ -144,7 +144,7 @@ export class MyChartComponent implements OnInit {
     }
 
     exportChart() {
-        if(this.dataSelection === '2019 External Debt (USD)'){
+        if (this.dataSelection === '2019 External Debt (USD)') {
             this.treemap.export('PNG', `export-${new Date().toLocaleTimeString()}`)
             this.treemap2.export('PNG', `export-${new Date().toLocaleTimeString()}`)
             return
@@ -185,6 +185,9 @@ export class MyChartComponent implements OnInit {
             })
             this.palette = ["#de5460"]
             // this.chart.refresh()
+            this.source = "NCDC"
+            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.last_update_date = "July 10, 2021"
             return
         }
         if (evt.target.value === "Total Confirmed Deaths") {
@@ -203,6 +206,9 @@ export class MyChartComponent implements OnInit {
             })
             this.palette = ["#d93b4a"]
             // this.chart.refresh()
+            this.source = "NCDC"
+            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.last_update_date = "July 10, 2021"
             return
         }
         if (evt.target.value === "Share of Population Living in Extreme Poverty") {
@@ -221,6 +227,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#de5460"]
+            this.source = "Statista"
+            this.source_link = "https://www.statista.com/"
+            this.last_update_date = ""
             // this.chart.refresh()
             return
         }
@@ -239,6 +248,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#00aeaa"]
+            this.source = "Statista"
+            this.source_link = "https://www.statista.com/"
+            this.last_update_date = "2016 Census"
             // this.chart.refresh()
             return
         }
@@ -258,6 +270,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#00aeaa"]
+            this.source = "NPHCDA"
+            this.source_link = "https://punchng.com/how-govt-budgeted-n10-6bn-for-covid-19-transportation-logistics-nphcda-document/"
+            this.last_update_date = "March 7, 2021"
             // this.chart.refresh()
             return
         }
@@ -277,6 +292,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#00aeaa"]
+            this.source = "NCDC"
+            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.last_update_date = "March 7, 2021"
             // this.chart.refresh()
             return
         }
@@ -302,6 +320,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0", "#36a2eb"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -326,6 +347,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0", "#36a2eb"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -350,6 +374,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0", "#36a2eb"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -374,6 +401,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0", "#d93b4a"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -398,6 +428,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0", "#d93b4a"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -417,6 +450,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#36a2eb"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -436,6 +472,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#4bc0c0"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -455,6 +494,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#d93b4a"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -476,6 +518,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#d93b4a"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -491,12 +536,12 @@ export class MyChartComponent implements OnInit {
             // this.viewChartForEconomyStacked("Domestic Debt (NGN)", "External Debt (USD)", data1, data2, false, true, ["#","#d93b4a"])
             this.chartTitle = "2019 External Debt (USD)"
             economicData.forEach((val) => {
-                if(val.x === "Lagos") {
+                if (val.x === "Lagos") {
                     this.dataSource2.push({
                         "state": val.x,
                         "data": val.Debt_Stock_2019_External_Debt
                     })
-                }else{
+                } else {
                     this.dataSource.push({
                         "state": val.x,
                         "data": val.Debt_Stock_2019_External_Debt
@@ -504,11 +549,14 @@ export class MyChartComponent implements OnInit {
                     })
                 }
             })
-            setTimeout(()=>{
+            setTimeout(() => {
                 this.treemap.refresh()
                 this.treemap2.refresh()
             }, 1000)
             this.palette = ["#d93b4a"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -538,6 +586,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#d93b4a"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -557,6 +608,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#d93b4a"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -592,6 +646,9 @@ export class MyChartComponent implements OnInit {
                 })
             })
             this.palette = ["#172b4d", "#5e72e4", "#ff4500", "#11cdef", "#2dce89", "#a52a2a"]
+            this.source = "Budgit"
+            this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
+            this.last_update_date = "2019/2020"
             // this.chart.refresh()
             return
         }
@@ -656,15 +713,15 @@ export class MyChartComponent implements OnInit {
         var header = ""
         var items = ""
 
-        for(const key in new DummyData().mapData[0]) {
+        for (const key in new DummyData().mapData[0]) {
             header += `${key},`
         }
 
         new DummyData().mapData.forEach(data => {
-            for(const key in data) {
-                if(key !== "covid_support") {
+            for (const key in data) {
+                if (key !== "covid_support") {
                     items += `${data[key]},`
-                }else {
+                } else {
                     items += `${data[key]}\n`
                 }
             }
