@@ -96,7 +96,6 @@ export class StateComponent implements OnInit {
       {title: "Total Confirmed Deaths", value: this.formatNumbers(others.death)},
       
       {title: "Vaccination Logistics Expenditure", value: this.formatNumbers(others.cost, true)},
-      {title: "FGN Covid-19 Support to State", value: this.formatNumbers(others.covid_support, true)},
       
       // {title: "", value: this.formatNumbers()},
       // {title: "", value: this.formatNumbers()},
@@ -125,6 +124,10 @@ export class StateComponent implements OnInit {
       {title: "2019 External Debt (USD)", value: `$${this.formatNumbers(eco1.Debt_Stock_2019_External_Debt)}`},
       {title: "Debt Growth[2014 - 2019]", value: `${this.formatNumbers(eco1.Debt_Growth)}%`},
       {title: "2020 Debt Size (position)", value: this.formatNumbers(eco1.Debt_Size)},
+    )
+
+    this.displayDataBySectorG.push(
+      {title: "FGN Covid-19 Support to State", value: this.formatNumbers(others.covid_support, true)},
     )
   }
 

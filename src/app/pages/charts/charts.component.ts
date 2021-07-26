@@ -76,10 +76,10 @@ export class MyChartComponent implements OnInit {
     @ViewChild('rechargetable', { static: false }) rtable: ElementRef;
 
     subDataTracker = [
-        { "name": "health", "options": ["-", "Total Confirmed Covid-19 Cases", "Total Confirmed Deaths", "Vaccination Logistics Expenditure", "FGN Covid-19 Support to State"] },
+        { "name": "health", "options": ["-", "Total Confirmed Covid-19 Cases", "Total Confirmed Deaths", "Vaccination Logistics Expenditure"] },
         { "name": "demography", "options": ["-", "Life Expectancy", "Share of Population Living in Extreme Poverty", "Population Density", "Total Population"] },
         { "name": "economy", "options": ["-", "Revenue Analysis", "6-Year Growth Analyis", "Structure of State Available Revenue", "2019 Ability to Meet Recurrent Expenditure", "Actual Expenditure 2019", "Health Budget", "Actual Capital Expenditure", "Total Debt", "2019 Domestic Debt (NGN)", "2019 External Debt (USD)", "Debt Growth", "Debt Size", "Total Debt Trend (2014 - 2019)"] },
-        { "name": "governance", "options": ["-", "State Budget Allocations", "Covid-Support Measures", "Income Support Measures"] },
+        { "name": "governance", "options": ["-","FGN Covid-19 Support to State", "State Budget Allocations", "Covid-Support Measures", "Income Support Measures"] },
         { "name": "food", "options": ["-", "Food Inflation", "People with Insufficient Food Intake", "Children under the age of 5 with acute malnutrition", "Children under 5 with chronic malnutrition"] }
     ]
 

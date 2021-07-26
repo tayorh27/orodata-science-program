@@ -279,18 +279,18 @@
               </tr>
               <tr>
                 <th scope="row">
-                  Source
+                  Source: <a *ngIf="source !== ''" href="{{source_link}}" target="_blank">{{source}}</a>
                 </th>
                 <td>
-                  <a *ngIf="source !== ''" href="{{source_link}}" target="_blank">{{source}}</a>
+                  
                 </td>
               </tr>
               <tr>
                 <th scope="row">
-                  Last Update Date
+                  Last Update Date: {{last_update_date}}
                 </th>
                 <td>
-                  {{last_update_date}}
+                  
                 </td>
               </tr>
             </tbody>
