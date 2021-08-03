@@ -304,7 +304,7 @@ export class MyChartComponent implements OnInit {
             this.palette = ["#de5460"]
             this.source = "Statista"
             this.source_link = "https://www.statista.com/"
-            this.last_update_date = ""
+            this.last_update_date = "2016"
             // this.chart.refresh()
             return
         }
@@ -755,6 +755,10 @@ export class MyChartComponent implements OnInit {
     ngOnInit() {
         // this.treemap.refresh()
         // this.excelBlaise()
+        this.source = "NCDC"
+        this.source_link = "https://covid19.ncdc.gov.ng/"
+        this.last_update_date = "July 10, 2021"
+
         const option = this.subDataTracker.find((val, arr, ind) => {
             return val.name === "health"
         })

@@ -33,7 +33,7 @@
     margin: auto;
   }
 </style>
-<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8" *ngIf="showHTML">
   <div class="container-fluid">
     <div class="header-body">
       <!-- Card stats -->
@@ -288,7 +288,7 @@
                   {{tooltipVac.total_poverty_pop}}
                 </td>
                 <td>
-                  <!--  -->
+                  2016
                 </td>
               </tr>
             </tbody>
