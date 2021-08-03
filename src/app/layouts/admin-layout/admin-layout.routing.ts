@@ -8,6 +8,7 @@ import { TablesComponent } from '../../pages/tables/tables.component';
 import { MyChartComponent } from '../../pages/charts/charts.component';
 import { AboutUsComponent } from 'src/app/pages/about-us/about-us.component';
 import { StateComponent } from 'src/app/pages/state/state.component';
+import { VaccineCentersComponent } from 'src/app/pages/vaccine-centers/vaccine-centers.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -17,5 +18,6 @@ export const AdminLayoutRoutes: Routes = [
     // { path: 'maps',           component: MapsComponent },
     { path: 'sector',           component:  MyChartComponent},
     { path: 'about-us',           component:  AboutUsComponent},
-    { path: 'state',           component:  StateComponent}
+    { path: 'state',           component:  StateComponent},
+    { path: 'vaccine-centers', component: VaccineCentersComponent}
 ];

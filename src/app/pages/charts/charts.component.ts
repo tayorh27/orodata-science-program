@@ -76,7 +76,7 @@ export class MyChartComponent implements OnInit {
     @ViewChild('rechargetable', { static: false }) rtable: ElementRef;
 
     subDataTracker = [
-        { "name": "health", "options": ["-", "Total Confirmed Covid-19 Cases", "Total Confirmed Deaths", "Vaccination Logistics Expenditure"] },
+        { "name": "health", "options": ["-", "Total Confirmed Covid-19 Cases", "Total Confirmed Deaths", "Vaccination Logistics Expenditure", "Total Clients Vaccinated (1st Dose)", "Percentage of Target Reached (1st Dose)", "Total Clients Vaccinated (2nd Dose)", "Percentage of Target Reached (2nd Dose)"] },
         { "name": "demography", "options": ["-", "Life Expectancy", "Share of Population Living in Extreme Poverty", "Population Density", "Total Population"] },
         { "name": "economy", "options": ["-", "Revenue Analysis", "6-Year Growth Analyis", "Structure of State Available Revenue", "2019 Ability to Meet Recurrent Expenditure", "Actual Expenditure 2019", "Health Budget", "Actual Capital Expenditure", "Total Debt", "2019 Domestic Debt (NGN)", "2019 External Debt (USD)", "Debt Growth", "Debt Size", "Total Debt Trend (2014 - 2019)"] },
         { "name": "governance", "options": ["-", "FGN Covid-19 Support to State", "State Budget Allocations", "Covid-Support Measures", "Income Support Measures"] },
@@ -169,6 +169,82 @@ export class MyChartComponent implements OnInit {
         this.stacked = false
         this.lineChart = false
 
+        if(evt.target.value === "Total Clients Vaccinated (1st Dose)"){
+            this.chartData = []
+            this.stacked = false
+            this.lineChart = false
+            this.chartTitle = "Total Clients Vaccinated (1st Dose)"
+            new DummyData().mapData.forEach((val) => {
+                this.chartData.push({
+                    "state": val.x,
+                    "data": val.first_dose
+                })
+            })
+            this.palette = ["#de5460"]
+            // this.chart.refresh()
+            this.source = "NPHCDA"
+            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.last_update_date = "July 4, 2021"
+            return
+        }
+
+        if(evt.target.value === "Percentage of Target Reached (1st Dose)"){
+            this.chartData = []
+            this.stacked = false
+            this.lineChart = false
+            this.chartTitle = "Percentage of Target Reached (1st Dose)"
+            new DummyData().mapData.forEach((val) => {
+                this.chartData.push({
+                    "state": val.x,
+                    "data": val.first_dose_percent
+                })
+            })
+            this.palette = ["#de5460"]
+            // this.chart.refresh()
+            this.source = "NPHCDA"
+            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.last_update_date = "July 4, 2021"
+            return
+        }
+
+        if(evt.target.value === "Total Clients Vaccinated (2nd Dose)"){
+            this.chartData = []
+            this.stacked = false
+            this.lineChart = false
+            this.chartTitle = "Total Clients Vaccinated (2nd Dose)"
+            new DummyData().mapData.forEach((val) => {
+                this.chartData.push({
+                    "state": val.x,
+                    "data": val.second_dose
+                })
+            })
+            this.palette = ["#de5460"]
+            // this.chart.refresh()
+            this.source = "NPHCDA"
+            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.last_update_date = "July 4, 2021"
+            return
+        }
+
+        if(evt.target.value === "Percentage of Target Reached (2nd Dose)"){
+            this.chartData = []
+            this.stacked = false
+            this.lineChart = false
+            this.chartTitle = "Percentage of Target Reached (2nd Dose)"
+            new DummyData().mapData.forEach((val) => {
+                this.chartData.push({
+                    "state": val.x,
+                    "data": val.second_dose_percent
+                })
+            })
+            this.palette = ["#de5460"]
+            // this.chart.refresh()
+            this.source = "NPHCDA"
+            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.last_update_date = "July 4, 2021"
+            return
+        }
+
         if (evt.target.value === "Total Confirmed Covid-19 Cases") {
             this.chartData = []
             this.stacked = false
@@ -206,9 +282,8 @@ export class MyChartComponent implements OnInit {
             })
             this.palette = ["#d93b4a"]
             // this.chart.refresh()
-            this.source = "NCDC"
-            this.source_link = "https://covid19.ncdc.gov.ng/"
-            this.last_update_date = "July 10, 2021"
+             
+            
             return
         }
         if (evt.target.value === "Share of Population Living in Extreme Poverty") {

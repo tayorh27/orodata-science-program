@@ -20,6 +20,7 @@ import { ChartModule, ChartAllModule, AccumulationChartAllModule, RangeNavigator
 import { MyChartComponent } from 'src/app/pages/charts/charts.component';
 import { AboutUsComponent } from 'src/app/pages/about-us/about-us.component';
 import { StateComponent } from 'src/app/pages/state/state.component';
+import { VaccineCentersComponent } from 'src/app/pages/vaccine-centers/vaccine-centers.component';
 
 @NgModule({
   imports: [
@@ -42,7 +43,8 @@ import { StateComponent } from 'src/app/pages/state/state.component';
     MapsComponent,
     MyChartComponent,
     AboutUsComponent,
-    StateComponent
+    StateComponent,
+    VaccineCentersComponent
   ]
 })
 

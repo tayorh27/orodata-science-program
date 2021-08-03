@@ -11,6 +11,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Data By Map',  icon: 'ni-world text-primary', class: '' },
     { path: '/sector', title: 'Data By Sector',  icon:'ni-chart-bar-32 text-blue', class: '' },
     { path: '/state', title: 'Data By State',  icon:'ni-pin-3 text-blue', class: '' },
+    // { path: '/vaccine-centers', title: 'Vaccine Centers',  icon:'ni-bullet-list-67 text-blue', class: '' },
     { path: '/about-us', title: 'About Us',  icon:'ni-single-02 text-blue', class: '' },
     // { path: '/maps', title: 'Maps',  icon:'ni-pin-3 text-orange', class: '' },
     // { path: '/user-profile', title: 'User profile',  icon:'ni-single-02 text-yellow', class: '' },
