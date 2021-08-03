@@ -183,7 +183,7 @@ export class MyChartComponent implements OnInit {
             this.palette = ["#de5460"]
             // this.chart.refresh()
             this.source = "NPHCDA"
-            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
             this.last_update_date = "July 4, 2021"
             return
         }
@@ -202,7 +202,7 @@ export class MyChartComponent implements OnInit {
             this.palette = ["#de5460"]
             // this.chart.refresh()
             this.source = "NPHCDA"
-            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
             this.last_update_date = "July 4, 2021"
             return
         }
@@ -221,7 +221,7 @@ export class MyChartComponent implements OnInit {
             this.palette = ["#de5460"]
             // this.chart.refresh()
             this.source = "NPHCDA"
-            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
             this.last_update_date = "July 4, 2021"
             return
         }
@@ -240,7 +240,7 @@ export class MyChartComponent implements OnInit {
             this.palette = ["#de5460"]
             // this.chart.refresh()
             this.source = "NPHCDA"
-            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
             this.last_update_date = "July 4, 2021"
             return
         }
