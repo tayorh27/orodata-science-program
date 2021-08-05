@@ -282,7 +282,9 @@ export class MyChartComponent implements OnInit {
             })
             this.palette = ["#d93b4a"]
             // this.chart.refresh()
-             
+            this.source = "NCDC"
+            this.source_link = "https://covid19.ncdc.gov.ng/"
+            this.last_update_date = "July 10, 2021"
             
             return
         }
