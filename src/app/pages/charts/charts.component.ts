@@ -73,6 +73,8 @@ export class MyChartComponent implements OnInit {
 
     dataSelection = ""
 
+    moreInfo = ""
+
     @ViewChild('rechargetable', { static: false }) rtable: ElementRef;
 
     subDataTracker = [
@@ -168,6 +170,7 @@ export class MyChartComponent implements OnInit {
         this.last_update_date = ""
         this.stacked = false
         this.lineChart = false
+        this.moreInfo = ""
 
         if(evt.target.value === "Total Clients Vaccinated (1st Dose)"){
             this.chartData = []
@@ -204,6 +207,7 @@ export class MyChartComponent implements OnInit {
             this.source = "NPHCDA"
             this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
             this.last_update_date = "June 4, 2021"
+            this.moreInfo = "% of target reached = total clients vaccinated (1st dose) / total eligible people targeted with vaccines in current phase(s)"
             return
         }
 
@@ -242,6 +246,7 @@ export class MyChartComponent implements OnInit {
             this.source = "NPHCDA"
             this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
             this.last_update_date = "June 4, 2021"
+            this.moreInfo = "% of target reached = total clients vaccinated (2nd dose) / total eligible people targeted with vaccines in current phase(s)"
             return
         }
 

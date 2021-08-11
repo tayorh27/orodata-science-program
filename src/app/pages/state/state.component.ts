@@ -96,6 +96,11 @@ export class StateComponent implements OnInit {
     this.displayDataBySectorH.push(
       {title: "Total Confirmed Covid-19 Cases", value: this.formatNumbers(others.cases)},
       {title: "Total Confirmed Deaths", value: this.formatNumbers(others.death)},
+
+      {title: "Total Clients Vaccinated (1st Dose)", value: this.formatNumbers(others.first_dose)},
+      {title: "Percentage of Target Reached (1st Dose)", value: `${this.formatNumbers(others.first_dose_percent)}%`},
+      {title: "Total Clients Vaccinated (2nd Dose)", value: this.formatNumbers(others.second_dose)},
+      {title: "Percentage of Target Reached (2nd Dose)", value: `${this.formatNumbers(others.second_dose_percent)}%`},
       
       {title: "Vaccination Logistics Expenditure", value: this.formatNumbers(others.cost, true)},
       

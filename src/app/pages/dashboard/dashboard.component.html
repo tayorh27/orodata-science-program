@@ -164,6 +164,12 @@
             [legendSettings]="legendSettings" (load)="load($event)" (itemSelection)="itemSelection($event)"
             format='n' useGroupingSeparator="true">
           </ejs-maps>
+          <br>
+          <h6 class="text-uppercase text-light ls-1 mb-1">
+            Low: Less Than 5,000<br>
+            Moderate: Between 5,000 and 20,000<br>
+            High: 20,000 and above
+          </h6>
           <!-- Chart (bubbleRendering)="bubbleRendering($event)"-->
           <!-- <div class="chart">
             <canvas id="chart-sales" class="chart-canvas"></canvas>
@@ -216,7 +222,7 @@
               </tr>
               <tr>
                 <th scope="row">
-                  Total Vaccine Delivered
+                  Total Number of Persons Vaccinated<!-- Total Vaccine Delivered -->
                 </th>
                 <td>
                   {{tooltipVac.total_vaccine_delivered}}
