@@ -13,14 +13,25 @@
     </div>
     <br>
     <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+      <h6>Toggle these buttons to display their respective information.</h6>
+      <div class="d-flex justify-content-between">
+        <a href="javascript:void(0)" class="btn btn-sm btn-danger mr-4" (click)="selectedOption = 'Health'">Health</a>
+        <a href="javascript:void(0)" class="btn btn-sm btn-info mr-4" (click)="selectedOption = 'Demography'">Demography</a>
+        <a href="javascript:void(0)" class="btn btn-sm btn-warning mr-4" (click)="selectedOption = 'Economy'">Economy</a>
+        <a href="javascript:void(0)" class="btn btn-sm btn-primary mr-4" (click)="selectedOption = 'Governance'">Governance</a>
+        <a href="javascript:void(0)" class="btn btn-sm btn-success mr-4" (click)="selectedOption = 'Food'">Food</a>
+      </div>
+    </div>
+    <br>
+    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Health'">
       <div class="d-flex justify-content-between">
         <a href="javascript:void(0)" class="btn btn-sm btn-danger mr-4">Health</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">{{currentState}}</a>
       </div>
     </div>
-    <br>
-    <div class="header-body">
+    <div class="header-body" *ngIf="selectedOption === 'Health'">
       <!-- Card stats -->
+    <br>
       <div class="row">
         <div class="col-xl-6 col-lg-6" style="margin-bottom: 5px;" *ngFor="let d of displayDataBySectorH;">
           <div class="card card-stats mb-4 mb-xl-0">
@@ -45,16 +56,15 @@
         </div>
       </div>
     </div>
-    <br>
-    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Demography'">
       <div class="d-flex justify-content-between">
         <a href="javascript:void(0)" class="btn btn-sm btn-info mr-4">Demography</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">{{currentState}}</a>
       </div>
     </div>
-    <br>
-    <div class="header-body">
+    <div class="header-body" *ngIf="selectedOption === 'Demography'">
       <!-- Card stats -->
+    <br>
       <div class="row">
         <div class="col-xl-3 col-lg-6" *ngFor="let d of displayDataBySectorD;">
           <div class="card card-stats mb-4 mb-xl-0">
@@ -79,18 +89,17 @@
         </div>
       </div>
     </div>
-    <br>
-    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Economy'">
       <div class="d-flex justify-content-between">
         <a href="javascript:void(0)" class="btn btn-sm btn-warning mr-4">Economy</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">{{currentState}}</a>
       </div>
     </div>
-    <br>
-    <div class="header-body">
+    <div class="header-body" *ngIf="selectedOption === 'Economy'">
       <!-- Card stats -->
+    <br>
       <div class="row">
-        <div class="col-xl-6 col-lg-6" style="margin-bottom: 5px;" *ngFor="let d of displayDataBySectorE;">
+        <div class="col-xl-3 col-lg-6" style="margin-bottom: 5px;" *ngFor="let d of displayDataBySectorE;">
           <div class="card card-stats mb-4 mb-xl-0">
             <div class="card-body">
               <div class="row">
@@ -113,16 +122,15 @@
         </div>
       </div>
     </div>
-    <br>
-    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Governance'">
       <div class="d-flex justify-content-between">
         <a href="javascript:void(0)" class="btn btn-sm btn-primary mr-4">Governance</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">{{currentState}}</a>
       </div>
     </div>
-    <br>
-    <div class="header-body">
+    <div class="header-body" *ngIf="selectedOption === 'Governance'">
       <!-- Card stats -->
+    <br>
       <div class="row">
         <div class="col-xl-3 col-lg-6" *ngFor="let d of displayDataBySectorG;">
           <div class="card card-stats mb-4 mb-xl-0">
@@ -147,16 +155,15 @@
         </div>
       </div>
     </div>
-    <br>
-    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Food'">
       <div class="d-flex justify-content-between">
         <a href="javascript:void(0)" class="btn btn-sm btn-success mr-4">Food</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">{{currentState}}</a>
       </div>
     </div>
-    <br>
-    <div class="header-body">
+    <div class="header-body" *ngIf="selectedOption === 'Food'">
       <!-- Card stats -->
+    <br>
       <div class="row">
         <div class="col-xl-3 col-lg-6" *ngFor="let d of displayDataBySectorF;">
           <div class="card card-stats mb-4 mb-xl-0">

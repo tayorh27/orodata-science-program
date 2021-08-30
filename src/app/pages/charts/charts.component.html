@@ -93,7 +93,7 @@
 </div>
 <div class="container-fluid mt--7">
   <div class="row">
-    <div class="col-xl-8 mb-5 mb-xl-0">
+    <div class="col-xl-12 mb-5 mb-xl-0">
       <div class="card bg-gradient-default shadow">
         <div class="card-header bg-transparent">
           <div class="row align-items-center">
@@ -192,7 +192,28 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-4">
+    <br>
+
+    <!-- <div class="col-xl-4">
+      <div class="card shadow">
+        <div class="card-header bg-transparent">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
+              <h2 class="mb-0">Total orders</h2>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="chart">
+            <canvas id="chart-orders" class="chart-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <div class="row">
+    <div class="col-xl-12">
       <div class="card shadow">
         <div class="card-header border-0">
           <div class="row align-items-center">
@@ -201,6 +222,7 @@
             </div>
             <div class="col text-right">
               <a href="javascript:void(0)" class="btn btn-sm btn-primary" (click)="exportChart()">Export</a>
+              <a href="javascript:void(0)" class="btn btn-sm btn-success" (click)="exportToExcel()">Export to Excel</a>
             </div>
           </div>
         </div>
@@ -282,7 +304,7 @@
                   Source: <a *ngIf="source !== ''" href="{{source_link}}" target="_blank">{{source}}</a>
                 </th>
                 <td>
-                  
+
                 </td>
               </tr>
               <tr>
@@ -290,7 +312,7 @@
                   Last Update Date: {{last_update_date}}
                 </th>
                 <td>
-                  
+
                 </td>
               </tr>
               <tr>
@@ -303,23 +325,44 @@
         </div>
       </div>
     </div>
-    <!-- <div class="col-xl-4">
-      <div class="card shadow">
-        <div class="card-header bg-transparent">
-          <div class="row align-items-center">
-            <div class="col">
-              <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
-              <h2 class="mb-0">Total orders</h2>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="chart">
-            <canvas id="chart-orders" class="chart-canvas"></canvas>
-          </div>
-        </div>
-      </div>
-    </div> -->
+  </div>
+  <div style="display: none;" class="material-datatables table-responsive" #rechargetable>
+    <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%"
+      style="width:100%">
+      <thead>
+        <tr>
+          <th>State</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>State</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr *ngFor="let row of chartData">
+          <td>{{row.state}}</td>
+          <td>{{row.data}}</td>
+          <td>{{row.data1}}</td>
+          <td>{{row.data2}}</td>
+          <td>{{row.data3}}</td>
+          <td>{{row.data4}}</td>
+          <td>{{row.data5}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div class="row mt-5" *ngIf="showHTML">
     <div class="col-xl-8 mb-5 mb-xl-0">

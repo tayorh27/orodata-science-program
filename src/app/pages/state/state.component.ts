@@ -13,6 +13,7 @@ declare var require: any;
 export class StateComponent implements OnInit {
 
   showHTML = false
+  selectedOption = "Health"
 
   currentState = "Abia"
   states = [

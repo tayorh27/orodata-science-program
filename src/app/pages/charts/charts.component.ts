@@ -9,7 +9,7 @@ import { TreeMap, TreeMapTooltip, TreeMapLegend, TreeMapComponent } from '@syncf
 import { IItemMoveEventArgs, ILoadEventArgs, TreeMapTheme, IItemClickEventArgs } from '@syncfusion/ej2-angular-treemap';
 TreeMap.Inject(TreeMapTooltip, TreeMapLegend);
 
-// import * as xlsx from 'xlsx';
+import * as xlsx from 'xlsx';
 // core components
 
 @Component({
@@ -172,7 +172,7 @@ export class MyChartComponent implements OnInit {
         this.lineChart = false
         this.moreInfo = ""
 
-        if(evt.target.value === "Total Clients Vaccinated (1st Dose)"){
+        if (evt.target.value === "Total Clients Vaccinated (1st Dose)") {
             this.chartData = []
             this.stacked = false
             this.lineChart = false
@@ -191,7 +191,7 @@ export class MyChartComponent implements OnInit {
             return
         }
 
-        if(evt.target.value === "Percentage of Target Reached (1st Dose)"){
+        if (evt.target.value === "Percentage of Target Reached (1st Dose)") {
             this.chartData = []
             this.stacked = false
             this.lineChart = false
@@ -211,7 +211,7 @@ export class MyChartComponent implements OnInit {
             return
         }
 
-        if(evt.target.value === "Total Clients Vaccinated (2nd Dose)"){
+        if (evt.target.value === "Total Clients Vaccinated (2nd Dose)") {
             this.chartData = []
             this.stacked = false
             this.lineChart = false
@@ -230,7 +230,7 @@ export class MyChartComponent implements OnInit {
             return
         }
 
-        if(evt.target.value === "Percentage of Target Reached (2nd Dose)"){
+        if (evt.target.value === "Percentage of Target Reached (2nd Dose)") {
             this.chartData = []
             this.stacked = false
             this.lineChart = false
@@ -290,7 +290,7 @@ export class MyChartComponent implements OnInit {
             this.source = "NCDC"
             this.source_link = "https://covid19.ncdc.gov.ng/"
             this.last_update_date = "July 10, 2021"
-            
+
             return
         }
         if (evt.target.value === "Share of Population Living in Extreme Poverty") {
@@ -1290,13 +1290,13 @@ export class MyChartComponent implements OnInit {
         });
     }
 
-    // exportToExcel() {
-    //     const ws: xlsx.WorkSheet =
-    //       xlsx.utils.table_to_sheet(this.rtable.nativeElement);
-    //     const wb: xlsx.WorkBook = xlsx.utils.book_new();
-    //     xlsx.utils.book_append_sheet(wb, ws, 'Sheet1');
-    //     xlsx.writeFile(wb, `${this.dataSelection.replace(/\ /g, "-")}.xlsx`);
-    //   }
+    exportToExcel() {
+        const ws: xlsx.WorkSheet =
+            xlsx.utils.table_to_sheet(this.rtable.nativeElement);
+        const wb: xlsx.WorkBook = xlsx.utils.book_new();
+        xlsx.utils.book_append_sheet(wb, ws, 'Sheet1');
+        xlsx.writeFile(wb, `${this.dataSelection.replace(/\ /g, "-")}.xlsx`);
+    }
 
 }
 
