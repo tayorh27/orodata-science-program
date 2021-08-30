@@ -4,7 +4,7 @@ import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import Chart from 'chart.js';
 import { economicData, economicData2 } from "../../economy-data";
 import { DummyData } from "../../population-data";
-import { ChartComponent } from '@syncfusion/ej2-angular-charts';
+import { ChartAnnotationSettings, ChartTheme, Series, ChartComponent, ChartAnnotationSettingsModel, ChartAnnotation } from '@syncfusion/ej2-angular-charts';
 import { TreeMap, TreeMapTooltip, TreeMapLegend, TreeMapComponent } from '@syncfusion/ej2-angular-treemap';
 import { IItemMoveEventArgs, ILoadEventArgs, TreeMapTheme, IItemClickEventArgs } from '@syncfusion/ej2-angular-treemap';
 TreeMap.Inject(TreeMapTooltip, TreeMapLegend);
@@ -151,7 +151,7 @@ export class MyChartComponent implements OnInit {
             this.treemap2.export('PNG', `export-${new Date().toLocaleTimeString()}`)
             return
         }
-        this.chart.exportModule.export('PNG', `export-${new Date().toLocaleTimeString()}`);
+        this.chart.exportModule.export('PDF', `export-${new Date().toLocaleTimeString()}`);
     }
 
     onTrackerChange(evt: any) {
@@ -748,6 +748,16 @@ export class MyChartComponent implements OnInit {
         visible: true,
         toggleVisibility: false
     };
+    public annotations: ChartAnnotationSettingsModel[] = [
+        {
+            x: '50%',
+            y: '50%',
+            coordinateUnits: 'Pixel',
+            horizontalAlignment: 'Center',
+            region: 'Series',
+            content: '<div id="chart_annotation" style="font-size:450%; opacity: 0.3;">Orodata Science</div>'
+        }
+    ];
     public palette: string[] = []
     public stacked = false
     public lineChart = false

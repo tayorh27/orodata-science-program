@@ -128,7 +128,7 @@
             <ejs-treemap id='container2' #treemap2 style="display:block;" [titleSettings]='titleSettings'
               [dataSource]='dataSource2' [weightValuePath]='weightValuePath' [tooltipSettings]='tooltipSettings'
               [palette]='treemapPalette' [legendSettings]='legendSettings' [leafItemSettings]='leafItemSettings'
-              format='n' useGroupingSeparator="true" (load)='load($event)'>
+              format='n' useGroupingSeparator="true" (load)='load($event)' [annotations]='annotations'>
               <e-levels>
                 <e-level groupPath='state' [border]='border'>
                 </e-level>
@@ -140,7 +140,7 @@
             <ejs-treemap id='container' #treemap style="display:block;" [titleSettings]='titleSettings'
               [dataSource]='dataSource' [weightValuePath]='weightValuePath' [tooltipSettings]='tooltipSettings'
               [palette]='treemapPalette' [legendSettings]='legendSettings' [leafItemSettings]='leafItemSettings'
-              format='n' useGroupingSeparator="true" (load)='load($event)'>
+              format='n' useGroupingSeparator="true" (load)='load($event)' [annotations]='annotations'>
               <e-levels>
                 <e-level groupPath='state' [border]='border'>
                 </e-level>
@@ -151,7 +151,7 @@
           <div *ngIf="dataSelection !== '2019 External Debt (USD)'">
             <ejs-chart #chart *ngIf="!stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
               [legendSettings]="legend" [title]='chartTitle' [tooltip]='tooltip' [zoomSettings]='zoom'
-              [palettes]='palette'>
+              [palettes]='palette' [annotations]='annotations'>
               <e-series-collection>
                 <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName="data"
                   name="{{chartTitle}}">
@@ -161,7 +161,7 @@
 
             <ejs-chart #chart *ngIf="stacked && !lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
               [primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom'
-              [title]='title' [tooltip]='tooltip' [palettes]='palette'>
+              [title]='title' [tooltip]='tooltip' [palettes]='palette' [annotations]='annotations'>
               <e-series-collection>
                 <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data'
                   name='{{stackedTitle1}}'></e-series>
@@ -172,7 +172,7 @@
 
             <ejs-chart #chart *ngIf="lineChart" id="chart-container" [primaryXAxis]='primaryXAxis'
               [primaryYAxis]='primaryYAxis' [title]='chartTitle' [legendSettings]="legend" [zoomSettings]='zoom'
-              [tooltip]='tooltip' [palettes]='palette'>
+              [tooltip]='tooltip' [palettes]='palette' [annotations]='annotations'>
               <e-series-collection>
                 <e-series [dataSource]='chartData' type='{{chartType}}' xName='state' yName='data'
                   name='{{stackedTitle1}}'></e-series>
