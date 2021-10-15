@@ -9,15 +9,17 @@ import { MyChartComponent } from '../../pages/charts/charts.component';
 import { AboutUsComponent } from 'src/app/pages/about-us/about-us.component';
 import { StateComponent } from 'src/app/pages/state/state.component';
 import { VaccineCentersComponent } from 'src/app/pages/vaccine-centers/vaccine-centers.component';
+import { ForeCastComponent } from 'src/app/pages/forecast/forecast.component';
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      component: DashboardComponent },
+    { path: 'dashboard', component: DashboardComponent },
     // { path: 'user-profile',   component: UserProfileComponent },
     // { path: 'tables',         component: TablesComponent },
     // { path: 'icons',          component: IconsComponent },
     // { path: 'maps',           component: MapsComponent },
-    { path: 'sector',           component:  MyChartComponent},
-    { path: 'about-us',           component:  AboutUsComponent},
-    { path: 'state',           component:  StateComponent},
-    { path: 'vaccine-centers', component: VaccineCentersComponent}
+    { path: 'sector', component: MyChartComponent },
+    { path: 'about-us', component: AboutUsComponent },
+    { path: 'state', component: StateComponent },
+    { path: 'vaccine-centers', component: VaccineCentersComponent },
+    { path: 'covid-19-forecast', component: ForeCastComponent }
 ];

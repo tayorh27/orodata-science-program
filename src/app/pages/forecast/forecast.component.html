@@ -1,0 +1,546 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div class="row" style="display: none;">
+        <div class="col-xl-3 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Traffic</h5>
+                  <span class="h2 font-weight-bold mb-0">350,897</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">
+                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                <span class="text-nowrap">Since last month</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
+                  <span class="h2 font-weight-bold mb-0">2,356</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                    <i class="fas fa-chart-pie"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">
+                <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
+                <span class="text-nowrap">Since last week</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
+                  <span class="h2 font-weight-bold mb-0">924</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                    <i class="fas fa-users"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">
+                <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
+                <span class="text-nowrap">Since yesterday</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
+                  <span class="h2 font-weight-bold mb-0">49,65%</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                    <i class="fas fa-percent"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">
+                <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
+                <span class="text-nowrap">Since last month</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col-xl-12 mb-5 mb-xl-0">
+      <div class="card bg-gradient-default shadow">
+        <div class="card-header bg-transparent">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase text-light ls-1 mb-1">Designathon</h6>
+              <h2 class="text-white mb-0">Facebook For Good Data</h2>
+            </div>
+            <div class="col">
+              <!-- <ul class="nav nav-pills justify-content-end" style="display: none;">
+                <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales"
+                  (click)="data=datasets[0];updateOptions()">
+                  <a href="javascript:void(0)" class="nav-link py-2 px-3" [ngClass]="{'active':clicked===true}"
+                    data-toggle="tab" (click)="clicked=true;clicked1=false">
+                    <span class="d-none d-md-block">Month</span>
+                    <span class="d-md-none">M</span>
+                  </a>
+                </li>
+                <li class="nav-item" data-toggle="chart" data-target="#chart-sales"
+                  (click)="data=datasets[1];updateOptions()">
+                  <a href="javascript:void(0)" class="nav-link py-2 px-3" [ngClass]="{'active':clicked1===true}"
+                    data-toggle="tab" (click)="clicked=false;clicked1=true">
+                    <span class="d-none d-md-block">Week</span>
+                    <span class="d-md-none">W</span>
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div id="action-description">
+            <p>
+              This sample visualizes the Facebook Covid-19 Forecasted Data by using bubble series in
+              the chart. Tooltip shows the information about the data.
+            </p>
+          </div>
+          <div class="control-section">
+            <div align='center'>
+              <ejs-chart style='display:block;' [chartArea]='chartArea' [width]='width' align='center'
+                id='chartcontainer' [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis' [title]='title'
+                [tooltip]='tooltip' (pointRender)='pointRender($event)' [legendSettings]='legend' (load)='load($event)'>
+                <e-series-collection>
+                  <e-series [dataSource]='data' [minRadius]='minRadius' [maxRadius]='maxRadius' type='Bubble' xName='county'
+                    yName='avg' size='size' name='Pound' [marker]='marker'> </e-series>
+                </e-series-collection>
+              </ejs-chart>
+            </div>
+            <div style="float: right; margin-right: 10px; margin-top: -5px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- <div class="col-xl-4">
+      <div class="card shadow">
+        <div class="card-header bg-transparent">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
+              <h2 class="mb-0">Total orders</h2>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="chart">
+            <canvas id="chart-orders" class="chart-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <div class="row" *ngIf="showHTML">
+    <div class="col-xl-12">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0">Filter By</h3>
+            </div>
+            <div class="col text-right">
+              <a href="javascript:void(0)" class="btn btn-sm btn-primary" (click)="exportChart()">Export</a>
+              <a href="javascript:void(0)" class="btn btn-sm btn-success" (click)="exportToExcel()">Export to Excel</a>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <!-- Projects table -->
+          <table class="table align-items-center table-flush">
+            <!-- <thead class="thead-light">
+              <tr>
+                <th scope="col">Data</th>
+                <th scope="col">Result</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead> -->
+            <tbody>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <select name="tracker" class="form-control form-control-alternative"
+                          (change)="onChartTypeChange($event)">
+                          <option value="none">Select Chart Type</option>
+                          <option value="Bar">Bar Chart</option>
+                          <option value="StackingBar">Stacked Bar Chart</option>
+                          <option value="Column">Column Chart</option>
+                          <option value="StackingColumn">Stacked Column Chart</option>
+                          <option value="StepLine">StepLine Chart</option>
+                          <option value="Scatter">Scatter Chart</option>
+                          <option value="Line">Line Chart</option>
+                          <option value="StackingLine">StackingLine Chart</option>
+                          <option value="Spline">Spline Chart</option>
+                          <option value="Area">Area Chart</option>
+                          <!-- <option value=""> Chart</option>
+                          <option value=""> Chart</option>
+                          <option value=""> Chart</option>
+                          <option value=""> Chart</option>
+                          <option value=""> Chart</option> -->
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <select name="tracker" class="form-control form-control-alternative"
+                          (change)="onTrackerChange($event)">
+                          <option value="health">Health</option>
+                          <option value="demography">Demography</option>
+                          <option value="economy">Economy</option>
+                          <option value="governance">Governance</option>
+                          <option value="food">Food</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <select name="tracker" class="form-control form-control-alternative"
+                          (change)="onSubTrackerChanged($event)">
+
+                          <option *ngFor="let dt of displayOptions;" value="{{dt}}">{{dt}}</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Source: <a *ngIf="source !== ''" href="{{source_link}}" target="_blank">{{source}}</a>
+                </th>
+                <td>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Last Update Date: {{last_update_date}}
+                </th>
+                <td>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  {{moreInfo}}
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display: none;" class="material-datatables table-responsive" #rechargetable>
+    <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%"
+      style="width:100%">
+      <thead>
+        <tr>
+          <th>State</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>State</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+          <th>Data</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <!-- <tr *ngFor="let row of chartData">
+          <td>{{row.state}}</td>
+          <td>{{row.data}}</td>
+          <td>{{row.data1}}</td>
+          <td>{{row.data2}}</td>
+          <td>{{row.data3}}</td>
+          <td>{{row.data4}}</td>
+          <td>{{row.data5}}</td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+  <div class="row mt-5" *ngIf="showHTML">
+    <div class="col-xl-8 mb-5 mb-xl-0">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0">Page visits</h3>
+            </div>
+            <div class="col text-right">
+              <a href="#!" class="btn btn-sm btn-primary">See all</a>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <!-- Projects table -->
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Page name</th>
+                <th scope="col">Visitors</th>
+                <th scope="col">Unique users</th>
+                <th scope="col">Bounce rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  /argon/
+                </th>
+                <td>
+                  4,569
+                </td>
+                <td>
+                  340
+                </td>
+                <td>
+                  <i class="fas fa-arrow-up text-success mr-3"></i> 46,53%
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  /argon/index.html
+                </th>
+                <td>
+                  3,985
+                </td>
+                <td>
+                  319
+                </td>
+                <td>
+                  <i class="fas fa-arrow-down text-warning mr-3"></i> 46,53%
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  /argon/charts.html
+                </th>
+                <td>
+                  3,513
+                </td>
+                <td>
+                  294
+                </td>
+                <td>
+                  <i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  /argon/tables.html
+                </th>
+                <td>
+                  2,050
+                </td>
+                <td>
+                  147
+                </td>
+                <td>
+                  <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  /argon/profile.html
+                </th>
+                <td>
+                  1,795
+                </td>
+                <td>
+                  190
+                </td>
+                <td>
+                  <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0">Social traffic</h3>
+            </div>
+            <div class="col text-right">
+              <a href="#!" class="btn btn-sm btn-primary">See all</a>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <!-- Projects table -->
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Referral</th>
+                <th scope="col">Visitors</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  Facebook
+                </th>
+                <td>
+                  1,480
+                </td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <span class="mr-2">60%</span>
+                    <div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="60"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Facebook
+                </th>
+                <td>
+                  5,480
+                </td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <span class="mr-2">70%</span>
+                    <div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="70"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Google
+                </th>
+                <td>
+                  4,807
+                </td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <span class="mr-2">80%</span>
+                    <div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-primary" role="progressbar" aria-valuenow="80"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Instagram
+                </th>
+                <td>
+                  3,678
+                </td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <span class="mr-2">75%</span>
+                    <div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  twitter
+                </th>
+                <td>
+                  2,645
+                </td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <span class="mr-2">30%</span>
+                    <div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="30"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

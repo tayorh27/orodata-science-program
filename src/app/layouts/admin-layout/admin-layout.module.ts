@@ -21,6 +21,7 @@ import { MyChartComponent } from 'src/app/pages/charts/charts.component';
 import { AboutUsComponent } from 'src/app/pages/about-us/about-us.component';
 import { StateComponent } from 'src/app/pages/state/state.component';
 import { VaccineCentersComponent } from 'src/app/pages/vaccine-centers/vaccine-centers.component';
+import { ForeCastComponent } from 'src/app/pages/forecast/forecast.component';
 
 @NgModule({
   imports: [
@@ -44,7 +45,8 @@ import { VaccineCentersComponent } from 'src/app/pages/vaccine-centers/vaccine-c
     MyChartComponent,
     AboutUsComponent,
     StateComponent,
-    VaccineCentersComponent
+    VaccineCentersComponent,
+    ForeCastComponent
   ]
 })
 
