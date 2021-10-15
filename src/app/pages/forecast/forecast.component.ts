@@ -62,11 +62,12 @@ export class ForeCastComponent implements OnInit {
             }
             // this.chart.refresh()
             if(i === data.length - 1) {
+                console.table(this.data)
                 this.chart.refresh()
             }
 
         }
-        this.chart.refresh()
+        // this.chart.refresh()
     }
 
     public data: Object[] = []
