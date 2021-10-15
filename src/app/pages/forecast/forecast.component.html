@@ -132,7 +132,7 @@
           </div>
           <div class="control-section">
             <div align='center'>
-              <ejs-chart style='display:block;' [chartArea]='chartArea' [width]='width' align='center'
+              <ejs-chart #chart style='display:block;' [chartArea]='chartArea' [width]='width' align='center'
                 id='chartcontainer' [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis' [title]='title'
                 [tooltip]='tooltip' (pointRender)='pointRender($event)' [legendSettings]='legend' (load)='load($event)'>
                 <e-series-collection>

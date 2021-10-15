@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from "@angular/core";
-import { IPointRenderEventArgs, ILoadedEventArgs, ChartTheme } from '@syncfusion/ej2-angular-charts';
+import { IPointRenderEventArgs, ILoadedEventArgs, ChartTheme, ChartComponent } from '@syncfusion/ej2-angular-charts';
 import { Browser } from '@syncfusion/ej2-base';
 import { forecastData } from "src/app/forecast-data";
 
@@ -18,6 +18,8 @@ export class ForeCastComponent implements OnInit {
     showHTML = false
 
     states:any = {}
+
+    @ViewChild('chart') public chart: ChartComponent;
 
     constructor() {
 
@@ -58,9 +60,10 @@ export class ForeCastComponent implements OnInit {
                 count = count + 1
                 end_date = date
             }
-
+            this.chart.refresh()
 
         }
+        this.chart.refresh()
     }
 
     public data: Object[] = []
