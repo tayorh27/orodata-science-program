@@ -16,7 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { MapsModule } from "@syncfusion/ej2-angular-maps";
 import { TreeMapAllModule, TreeMapModule, } from "@syncfusion/ej2-angular-treemap";
-import { ChartModule, ChartAllModule, AccumulationChartAllModule, RangeNavigatorAllModule } from "@syncfusion/ej2-angular-charts";
+import { ChartModule, ChartAllModule, AccumulationChartAllModule, RangeNavigatorAllModule, BubbleSeriesService } from "@syncfusion/ej2-angular-charts";
 import { MyChartComponent } from 'src/app/pages/charts/charts.component';
 import { AboutUsComponent } from 'src/app/pages/about-us/about-us.component';
 import { StateComponent } from 'src/app/pages/state/state.component';
@@ -47,7 +47,8 @@ import { ForeCastComponent } from 'src/app/pages/forecast/forecast.component';
     StateComponent,
     VaccineCentersComponent,
     ForeCastComponent
-  ]
+  ],
+  providers: [BubbleSeriesService]
 })
 
 export class AdminLayoutModule {}
