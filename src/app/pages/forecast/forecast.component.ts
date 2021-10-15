@@ -10,7 +10,7 @@ import * as xlsx from 'xlsx';
     selector: 'forecast-root',
     templateUrl: './forecast.component.html',
     styleUrls: ['./forecast.component.css'],
-    encapsulation: ViewEncapsulation.None
+    // encapsulation: ViewEncapsulation.None
 })
 
 export class ForeCastComponent implements OnInit {
@@ -60,7 +60,10 @@ export class ForeCastComponent implements OnInit {
                 count = count + 1
                 end_date = date
             }
-            this.chart.refresh()
+            // this.chart.refresh()
+            if(i === data.length - 1) {
+                this.chart.refresh()
+            }
 
         }
         this.chart.refresh()
