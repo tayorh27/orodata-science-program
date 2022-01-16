@@ -17,7 +17,7 @@ export class StateComponent implements OnInit {
 
   currentState = "Abia"
   states = [
-    'Select a state',
+    // 'Select a state',
     'Abia',
     'Adamawa',
     'Akwa Ibom',

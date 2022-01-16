@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="form-group">
+          <h6 style="color: white;">Select state</h6>
           <select name="tracker" class="form-control form-control-alternative"
             (change)="onStateChanged($event)">
 
@@ -12,22 +13,24 @@
       </div>
     </div>
     <br>
-    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+    <div class="card-header text-center border-0 pt-md-4 pb-0 pb-md-4">
       <h6>Toggle these buttons to display their respective information.</h6>
       <div class="d-flex justify-content-between">
-        <a href="javascript:void(0)" class="btn btn-sm btn-danger mr-4" (click)="selectedOption = 'Health'">Health</a>
-        <a href="javascript:void(0)" class="btn btn-sm btn-info mr-4" (click)="selectedOption = 'Demography'">Demography</a>
-        <a href="javascript:void(0)" class="btn btn-sm btn-warning mr-4" (click)="selectedOption = 'Economy'">Economy</a>
-        <a href="javascript:void(0)" class="btn btn-sm btn-primary mr-4" (click)="selectedOption = 'Governance'">Governance</a>
-        <a href="javascript:void(0)" class="btn btn-sm btn-success mr-4" (click)="selectedOption = 'Food'">Food</a>
+        <a href="javascript:void(0)" class="btn btn-sm btn-danger" (click)="selectedOption = 'Health'">Health</a>
+        <a href="javascript:void(0)" class="btn btn-sm btn-info" (click)="selectedOption = 'Demography'">Demography</a>
+        <a href="javascript:void(0)" class="btn btn-sm btn-warning" (click)="selectedOption = 'Economy'">Economy</a>
+        <a href="javascript:void(0)" class="btn btn-sm btn-primary" (click)="selectedOption = 'Governance'">Governance</a>
+        <a href="javascript:void(0)" class="btn btn-sm btn-success" (click)="selectedOption = 'Food'">Food</a>
       </div>
+      <br>
     </div>
     <br>
-    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Health'">
+    <div class="card-header text-center border-0 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Health'">
       <div class="d-flex justify-content-between">
         <a href="javascript:void(0)" class="btn btn-sm btn-danger mr-4">Health</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">{{currentState}}</a>
       </div>
+      <br>
     </div>
     <div class="header-body" *ngIf="selectedOption === 'Health'">
       <!-- Card stats -->
@@ -56,11 +59,12 @@
         </div>
       </div>
     </div>
-    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Demography'">
+    <div class="card-header text-center border-0 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Demography'">
       <div class="d-flex justify-content-between">
         <a href="javascript:void(0)" class="btn btn-sm btn-info mr-4">Demography</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">{{currentState}}</a>
       </div>
+      <br>
     </div>
     <div class="header-body" *ngIf="selectedOption === 'Demography'">
       <!-- Card stats -->
@@ -89,11 +93,12 @@
         </div>
       </div>
     </div>
-    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Economy'">
+    <div class="card-header text-center border-0 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Economy'">
       <div class="d-flex justify-content-between">
         <a href="javascript:void(0)" class="btn btn-sm btn-warning mr-4">Economy</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">{{currentState}}</a>
       </div>
+      <br>
     </div>
     <div class="header-body" *ngIf="selectedOption === 'Economy'">
       <!-- Card stats -->
@@ -122,11 +127,12 @@
         </div>
       </div>
     </div>
-    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Governance'">
+    <div class="card-header text-center border-0 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Governance'">
       <div class="d-flex justify-content-between">
         <a href="javascript:void(0)" class="btn btn-sm btn-primary mr-4">Governance</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">{{currentState}}</a>
       </div>
+      <br>
     </div>
     <div class="header-body" *ngIf="selectedOption === 'Governance'">
       <!-- Card stats -->
@@ -155,11 +161,12 @@
         </div>
       </div>
     </div>
-    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Food'">
+    <div class="card-header text-center border-0 pt-md-4 pb-0 pb-md-4" *ngIf="selectedOption === 'Food'">
       <div class="d-flex justify-content-between">
         <a href="javascript:void(0)" class="btn btn-sm btn-success mr-4">Food</a>
         <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">{{currentState}}</a>
       </div>
+      <br>
     </div>
     <div class="header-body" *ngIf="selectedOption === 'Food'">
       <!-- Card stats -->
