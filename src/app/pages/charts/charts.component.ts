@@ -187,7 +187,7 @@ export class MyChartComponent implements OnInit {
             // this.chart.refresh()
             this.source = "NPHCDA"
             this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
-            this.last_update_date = "June 4, 2021"
+            this.last_update_date = "March 4, 2022"
             return
         }
 
@@ -206,7 +206,7 @@ export class MyChartComponent implements OnInit {
             // this.chart.refresh()
             this.source = "NPHCDA"
             this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
-            this.last_update_date = "June 4, 2021"
+            this.last_update_date = "March 4, 2022"
             this.moreInfo = "% of target reached = total clients vaccinated (1st dose) / total eligible people targeted with vaccines in current phase(s)"
             return
         }
@@ -226,7 +226,7 @@ export class MyChartComponent implements OnInit {
             // this.chart.refresh()
             this.source = "NPHCDA"
             this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
-            this.last_update_date = "June 4, 2021"
+            this.last_update_date = "March 4, 2022"
             return
         }
 
@@ -245,7 +245,7 @@ export class MyChartComponent implements OnInit {
             // this.chart.refresh()
             this.source = "NPHCDA"
             this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
-            this.last_update_date = "June 4, 2021"
+            this.last_update_date = "March 4, 2022"
             this.moreInfo = "% of target reached = total clients vaccinated (2nd dose) / total eligible people targeted with vaccines in current phase(s)"
             return
         }
@@ -268,7 +268,7 @@ export class MyChartComponent implements OnInit {
             // this.chart.refresh()
             this.source = "NCDC"
             this.source_link = "https://covid19.ncdc.gov.ng/"
-            this.last_update_date = "July 10, 2021"
+            this.last_update_date = "February 27, 2022"
             return
         }
         if (evt.target.value === "Total Confirmed Deaths") {
@@ -289,7 +289,7 @@ export class MyChartComponent implements OnInit {
             // this.chart.refresh()
             this.source = "NCDC"
             this.source_link = "https://covid19.ncdc.gov.ng/"
-            this.last_update_date = "July 10, 2021"
+            this.last_update_date = "February 27, 2022"
 
             return
         }
