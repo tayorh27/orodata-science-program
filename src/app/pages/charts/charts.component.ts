@@ -78,11 +78,11 @@ export class MyChartComponent implements OnInit {
     @ViewChild('rechargetable', { static: false }) rtable: ElementRef;
 
     subDataTracker = [
-        { "name": "health", "options": ["-", "Total Confirmed Covid-19 Cases", "Total Confirmed Deaths", "Vaccination Logistics Expenditure", "Total Clients Vaccinated (1st Dose)", "Percentage of Target Reached (1st Dose)", "Total Clients Vaccinated (2nd Dose)", "Percentage of Target Reached (2nd Dose)"] },
-        { "name": "demography", "options": ["-", "Life Expectancy", "Share of Population Living in Extreme Poverty", "Population Density", "Total Population"] },
-        { "name": "economy", "options": ["-", "Revenue Analysis", "6-Year Growth Analyis", "Structure of State Available Revenue", "2019 Ability to Meet Recurrent Expenditure", "Actual Expenditure 2019", "Health Budget", "Actual Capital Expenditure", "Total Debt", "2019 Domestic Debt (NGN)", "2019 External Debt (USD)", "Debt Growth", "Debt Size", "Total Debt Trend (2014 - 2019)"] },
-        { "name": "governance", "options": ["-", "FGN Covid-19 Support to State", "State Budget Allocations", "Covid-Support Measures", "Income Support Measures"] },
-        { "name": "food", "options": ["-", "Food Inflation", "People with Insufficient Food Intake", "Children under the age of 5 with acute malnutrition", "Children under 5 with chronic malnutrition"] }
+        { "name": "health", "options": ["Select option", "Total Confirmed Covid-19 Cases", "Total Confirmed Deaths", "Vaccination Logistics Expenditure", "Total Persons Vaccinated (1st Dose)", "Percentage of Target Reached (1st Dose)", "Total Persons Vaccinated (2nd Dose)", "Percentage of Target Reached (2nd Dose)"] },
+        { "name": "demography", "options": ["Select option", "Life Expectancy", "Share of Population Living in Extreme Poverty", "Population Density", "Total Population"] },
+        { "name": "economy", "options": ["Select option", "Revenue Analysis", "6-Year Growth Analyis", "Structure of State Available Revenue", "2021 Ability to Meet Recurrent Expenditure", "Actual Expenditure 2021", "Health Budget", "Actual Capital Expenditure", "Total Debt", "2019 Domestic Debt (NGN)", "2019 External Debt (USD)", "Debt Growth", "Debt Size", "Total Debt Trend (2014 - 2019)"] },
+        { "name": "governance", "options": ["Select option", "FGN Covid-19 Support to State", "State Budget Allocations", "Covid-Support Measures", "Income Support Measures"] },
+        { "name": "food", "options": ["Select option", "Food Inflation", "People with Insufficient Food Intake", "Children under the age of 5 with acute malnutrition", "Children under 5 with chronic malnutrition"] }
     ]
 
     displayOptions = []
@@ -172,11 +172,11 @@ export class MyChartComponent implements OnInit {
         this.lineChart = false
         this.moreInfo = ""
 
-        if (evt.target.value === "Total Clients Vaccinated (1st Dose)") {
+        if (evt.target.value === "Total Persons Vaccinated (1st Dose)") {
             this.chartData = []
             this.stacked = false
             this.lineChart = false
-            this.chartTitle = "Total Clients Vaccinated (1st Dose)"
+            this.chartTitle = "Total Persons Vaccinated (1st Dose)"
             new DummyData().mapData.forEach((val) => {
                 this.chartData.push({
                     "state": val.x,
@@ -207,15 +207,15 @@ export class MyChartComponent implements OnInit {
             this.source = "NPHCDA"
             this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
             this.last_update_date = "March 4, 2022"
-            this.moreInfo = "% of target reached = total clients vaccinated (1st dose) / total eligible people targeted with vaccines in current phase(s)"
+            this.moreInfo = "% of target reached = total persons vaccinated (1st dose) / total eligible people targeted with vaccines in current phase(s)"
             return
         }
 
-        if (evt.target.value === "Total Clients Vaccinated (2nd Dose)") {
+        if (evt.target.value === "Total Persons Vaccinated (2nd Dose)") {
             this.chartData = []
             this.stacked = false
             this.lineChart = false
-            this.chartTitle = "Total Clients Vaccinated (2nd Dose)"
+            this.chartTitle = "Total Persons Vaccinated (2nd Dose)"
             new DummyData().mapData.forEach((val) => {
                 this.chartData.push({
                     "state": val.x,
@@ -246,7 +246,7 @@ export class MyChartComponent implements OnInit {
             this.source = "NPHCDA"
             this.source_link = "https://twitter.com/NphcdaNG/status/1400875651012378627?s=20"
             this.last_update_date = "March 4, 2022"
-            this.moreInfo = "% of target reached = total clients vaccinated (2nd dose) / total eligible people targeted with vaccines in current phase(s)"
+            this.moreInfo = "% of target reached = total persons vaccinated (2nd dose) / total eligible people targeted with vaccines in current phase(s)"
             return
         }
 
@@ -392,8 +392,8 @@ export class MyChartComponent implements OnInit {
             this.chartData = []
             this.stacked = true
             this.lineChart = false
-            this.stackedTitle1 = "Revenue Analysis[2014 - 2019] - IGR (NGN)"
-            this.stackedTitle2 = "Revenue Analysis[2014 - 2019] - NET FACC (NGN)"
+            this.stackedTitle1 = "Revenue Analysis[2021] - IGR (NGN)"
+            this.stackedTitle2 = "Revenue Analysis[2021] - NET FACC (NGN)"
             economicData.forEach((val) => {
                 this.chartData.push({
                     "state": val.x,
@@ -404,7 +404,7 @@ export class MyChartComponent implements OnInit {
             this.palette = ["#4bc0c0", "#36a2eb"]
             this.source = "Budgit"
             this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
-            this.last_update_date = "2019/2020"
+            this.last_update_date = "2021"
             // this.chart.refresh()
             return
         }
@@ -463,7 +463,7 @@ export class MyChartComponent implements OnInit {
             return
         }
 
-        if (evt.target.value === "2019 Ability to Meet Recurrent Expenditure") {
+        if (evt.target.value === "2021 Ability to Meet Recurrent Expenditure") {
             this.source = "Budgit"
             // const data1 = economicData.map((val) => val.Ability_to_meet_Recurrent_Expenditure_total_revenue)
             // const data2 = economicData.map((val) => val.Ability_to_meet_Recurrent_Expenditure_recurrent_expenditure)
@@ -485,12 +485,12 @@ export class MyChartComponent implements OnInit {
             this.palette = ["#4bc0c0", "#d93b4a"]
             this.source = "Budgit"
             this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
-            this.last_update_date = "2019/2020"
+            this.last_update_date = "2021"
             // this.chart.refresh()
             return
         }
 
-        if (evt.target.value === "Actual Expenditure 2019") {
+        if (evt.target.value === "Actual Expenditure 2021") {
             this.source = "Budgit"
             // const data1 = economicData.map((val) => val.Actual_Expenditure_2019_Capital_Expenditure)
             // const data2 = economicData.map((val) => val.Actual_Expenditure_2019_Recurrent_Expenditure)
@@ -512,7 +512,7 @@ export class MyChartComponent implements OnInit {
             this.palette = ["#4bc0c0", "#d93b4a"]
             this.source = "Budgit"
             this.source_link = "https://yourbudgit.com/wp-content/uploads/2020/11/State-of-States-2020-Revised-Edition.pdf"
-            this.last_update_date = "2019/2020"
+            this.last_update_date = "2021"
             // this.chart.refresh()
             return
         }
