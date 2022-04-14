@@ -76,13 +76,13 @@ export class MyChartComponent implements OnInit {
     moreInfo = ""
 
     @ViewChild('rechargetable', { static: false }) rtable: ElementRef;
-
+    // "Life Expectancy", "Population Density",
     subDataTracker = [
         { "name": "health", "options": ["Select option", "Total Confirmed Covid-19 Cases", "Total Confirmed Deaths", "Vaccination Logistics Expenditure", "Total Persons Vaccinated (1st Dose)", "Percentage of Target Reached (1st Dose)", "Total Persons Vaccinated (2nd Dose)", "Percentage of Target Reached (2nd Dose)"] },
-        { "name": "demography", "options": ["Select option", "Life Expectancy", "Share of Population Living in Extreme Poverty", "Population Density", "Total Population"] },
+        { "name": "demography", "options": ["Select option",  "Share of Population Living in Extreme Poverty", "Total Population"] },
         { "name": "economy", "options": ["Select option", "Revenue Analysis", "6-Year Growth Analyis", "Structure of State Available Revenue", "2021 Ability to Meet Recurrent Expenditure", "Actual Expenditure 2021", "Health Budget", "Actual Capital Expenditure", "Total Debt", "2019 Domestic Debt (NGN)", "2019 External Debt (USD)", "Debt Growth", "Debt Size", "Total Debt Trend (2014 - 2019)"] },
         { "name": "governance", "options": ["Select option", "FGN Covid-19 Support to State", "State Budget Allocations", "Covid-Support Measures", "Income Support Measures"] },
-        { "name": "food", "options": ["Select option", "Food Inflation", "People with Insufficient Food Intake", "Children under the age of 5 with acute malnutrition", "Children under 5 with chronic malnutrition"] }
+        // { "name": "food", "options": ["Select option", "Food Inflation", "People with Insufficient Food Intake", "Children under the age of 5 with acute malnutrition", "Children under 5 with chronic malnutrition"] }
     ]
 
     displayOptions = []
